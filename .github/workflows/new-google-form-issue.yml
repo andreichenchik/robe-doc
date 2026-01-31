@@ -1,0 +1,40 @@
+name: New Google Form Issue
+
+on:
+  issues:
+    types: [opened, labeled]
+
+jobs:
+  refine:
+    if: |
+      contains(github.event.issue.labels.*.name, 'googleForm') &&
+      !contains(github.event.issue.labels.*.name, 'refined')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+      id-token: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Refine Google Form Issue
+        uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          prompt: |
+            You are processing issue #${{ github.event.issue.number }} created from a Google Form submission.
+
+            Steps:
+            1. Read the current issue title and body using `gh issue view ${{ github.event.issue.number }}`
+            2. Translate the form content to English (the original may be in any language)
+            3. Create a concise, meaningful English title. Keep the "RF-X:" prefix from the original title if present
+            4. Update the issue body with this structure:
+               - English description of the reported issue at the top
+               - A horizontal rule (---)
+               - Original body text preserved unchanged below the rule
+            5. Apply the changes:
+               - `gh issue edit ${{ github.event.issue.number }} --title "<new title>" --body "<new body>"`
+               - `gh issue edit ${{ github.event.issue.number }} --add-label "refined"`
