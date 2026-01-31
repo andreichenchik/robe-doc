@@ -22,6 +22,7 @@ A clothing piece in the user's digital wardrobe. Item is the central entity of t
 
 ## Relationships
 
+- An Item belongs to one [User](user.md).
 - An Item belongs to one [Category](category.md).
 - An Item can have zero or more [Tags](tag.md).
 - An Item can appear in zero or more [Outfits](outfit.md).

@@ -20,6 +20,7 @@ A combination of [Items](item.md) arranged together to represent a look. Users c
 
 ## Relationships
 
+- An Outfit belongs to one [User](user.md).
 - An Outfit contains one or more [Items](item.md).
 - An Outfit may belong to a collection.
 
