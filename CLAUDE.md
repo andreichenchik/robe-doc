@@ -16,7 +16,7 @@ A mobile app that helps users manage their clothing inventory and create outfits
 
 ```
 docs/
-├── index.md          # Landing page with product vision
+├── README.md          # Landing page with product vision
 ├── _sidebar.md       # Docsify navigation (keep in sync with content)
 ├── domain/           # Data model and business rules
 ├── features/         # Product capabilities
