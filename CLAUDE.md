@@ -76,6 +76,15 @@ Examples: `docs/add-onboarding-guide`, `auto/lint-markdown`, `fix/broken-links`.
 
 Each logically distinct change should be submitted as a separate pull request. Do not combine unrelated changes in one PR.
 
+## Pre-Commit Checklist
+
+Before committing, verify that all related parts of the documentation are consistent with the change:
+
+- `_sidebar.md` reflects any added, removed, or renamed pages.
+- `CLAUDE.md` documentation structure tree is up to date.
+- Cross-links in other files still point to valid targets.
+- Existing docs that reference the changed concept are updated if needed.
+
 ## Docsify Setup
 
 Local development:
