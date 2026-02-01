@@ -35,7 +35,7 @@ Focus on: what the system supports, what it does not, and what is yet to be deci
 
 Describes entities that exist in the system: what data they hold, how they relate to each other, what rules govern them.
 
-Examples: Item (clothing piece), Outfit (combination of items), Category hierarchy, Tags.
+Examples: Item (clothing piece), Outfit (combination of items), Category hierarchy, Collections.
 
 Focus on: attributes, relationships, constraints, edge cases (what happens when item is deleted but belongs to outfit?).
 
@@ -59,6 +59,7 @@ Focus on: trigger, steps, decision points, success/failure outcomes.
 
 - **Abstract from tech stack.** Documentation describes *what* the product does, not *how* it is implemented. Do not mention specific technologies, frameworks, databases, or APIs. Write so that the documentation remains valid regardless of the underlying implementation.
 
+- **Single source of truth.** Define each concept in exactly one place. Other files that mention it should link to the source rather than repeat the description. For example, a flow step should say `[Collections](../domain/collection.md)` instead of re-explaining what a collection is. This keeps updates localized to one file.
 - One file = one concept. Split when a file grows beyond its scope.
 - Use relative paths with `.md` extension for cross-links: `[Category](./category.md)`, `[AI Recognition](../features/ai-recognition.md)`. Paths are relative to the file containing the link.
 - Keep `_sidebar.md` updated — it defines site navigation.

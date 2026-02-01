@@ -13,7 +13,7 @@ The wardrobe serves as a visual browser of everything the user owns. Its primary
 | [Category](../domain/category.md) | AI-detected or manually assigned |
 | Type | AI-detected or manually assigned |
 | Color | AI-detected |
-| [Tags](../domain/tag.md) | User-assigned |
+| [Collections](../domain/collection.md) | User-assigned |
 
 > [!NOTE]
 > **Undefined — requires clarification:**

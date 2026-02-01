@@ -15,10 +15,8 @@ Let users visually combine clothing pieces into a look by dragging and positioni
 
 ## Technical Details
 
-### Normalized Coordinates
-Item positions are stored as normalized values (0.0–1.0) rather than absolute pixel coordinates. This ensures outfits render correctly across different screen sizes and devices.
+Item positions use the [normalized coordinate system](../domain/outfit.md#collage-data-model) defined in the Outfit data model.
 
-### Performance
 - Drag-and-drop is optimized for smooth operation.
 - Collage state is synchronized with the backend.
 

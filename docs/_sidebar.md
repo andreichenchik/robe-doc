@@ -10,7 +10,7 @@
   - [Item](/domain/item.md)
   - [Outfit](/domain/outfit.md)
   - [Category](/domain/category.md)
-  - [Tag](/domain/tag.md)
+  - [Collection](/domain/collection.md)
   - [User](/domain/user.md)
 
 - **Features**
