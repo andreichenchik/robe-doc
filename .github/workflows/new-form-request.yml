@@ -41,7 +41,8 @@ jobs:
                - Read `docs/_sidebar.md` to get the full documentation index
                - Identify which features, entities, or flows are mentioned or implied by the request
                - Read the relevant doc files to understand what is already documented
-               - Compose a brief "Documentation Context" section with links to relevant docs
+               - Compose a "Documentation Context" section that starts with a brief summary paragraph (1-3 sentences) explaining how this request relates to what is already documented — what exists, what would need to change, what gaps there are
+               - Below the summary, list links to relevant docs
                - Use this link format: ${{ github.server_url }}/${{ github.repository }}/blob/main/docs/<path>
                - Each link should have a one-line note on why it is relevant
                - Omit this section entirely if no docs are relevant
