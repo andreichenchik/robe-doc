@@ -1,5 +1,11 @@
 - [ROBE Documentation](/)
 
+- **Constraints**
+  - [Platform](constraints/platform.md)
+  - [Localization](constraints/localization.md)
+  - [Data & Sync](constraints/data-sync.md)
+  - [Open Questions](constraints/open-questions.md)
+
 - **Domain**
   - [Item](domain/item.md)
   - [Outfit](domain/outfit.md)
