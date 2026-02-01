@@ -11,7 +11,7 @@ A clothing piece in the user's digital wardrobe. Item is the central entity of t
 - **Brand** — brand of the garment.
 - **Collections** — user-defined groupings for organization. See [Collection](./collection.md).
 
-All attributes except Collections are auto-detected by [AI Recognition](../features/ai-recognition.md) on creation and can be edited by the user.
+All attributes are auto-detected or suggested by [AI Recognition](../features/ai-recognition.md) on creation and can be edited by the user.
 
 > [!NOTE]
 > **Undefined — requires clarification:**
@@ -25,7 +25,7 @@ All attributes except Collections are auto-detected by [AI Recognition](../featu
 
 When a new item is added via the [Add Item](../flows/add-item.md) flow, it goes through a processing pipeline. The item appears in the wardrobe immediately, and its status is visible to the user:
 
-1. **Processing** — [Background Removal](../features/background-removal.md) is running on-device.
+1. **Processing** — [Background Removal](../features/background-removal.md) is running.
 2. **Uploading** — the processed photo is being uploaded.
 3. **Classifying** — [AI Recognition](../features/ai-recognition.md) is detecting attributes.
 4. **Classified** — all processing is done; the item is fully ready for viewing and editing.
