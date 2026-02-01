@@ -20,7 +20,7 @@ See also: [Onboarding](../flows/onboarding.md).
 
 Whether the system imposes limits on user data. Affects product positioning and infrastructure costs.
 
-- Maximum number of items, outfits, or tags per user.
+- Maximum number of items, outfits, or collections per user.
 - Photo storage limits (size, resolution, count).
 - Whether limits differ by plan (if monetization introduces tiers).
 
