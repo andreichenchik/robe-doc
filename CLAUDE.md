@@ -62,7 +62,7 @@ Focus on: trigger, steps, decision points, success/failure outcomes.
 - Use absolute paths from docs root without `.md` extension for cross-links: `[Item](/domain/item)`, `[AI Recognition](/features/ai-recognition)`.
 - Keep `_sidebar.md` updated — it defines site navigation.
 - Write for someone who has never seen the app. Be specific enough that a developer could implement from the description.
-- When something is unclear or undefined, note it explicitly rather than guessing.
+- **Mark unknowns explicitly.** When something is unclear or undefined, add a `> [!NOTE]` block rather than guessing. These blocks are knowledge gap markers across the documentation. When new information resolves a `> [!NOTE]` block, update or remove it.
 
 ## Branch Naming
 
