@@ -23,11 +23,10 @@ Collections let users define their own cross-cutting labels (e.g. "sporty", "eve
 
 ## Business Rules
 
-- Collections are created by the user (not auto-detected by AI).
+- Collections are created by the user. During item classification, [AI Recognition](../features/ai-recognition.md) can suggest assigning existing collections to a new item, but it does not create new collections.
 - An Item or Outfit can belong to zero or more Collections.
 
 > [!NOTE]
 > **Undefined — requires clarification:**
-> - Are collections auto-suggested based on existing collections?
 > - What happens to a collection when all items and outfits using it are removed from it?
 > - Is there a limit on collections per item/outfit or total collections per user?
