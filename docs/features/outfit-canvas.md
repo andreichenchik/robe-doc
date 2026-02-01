@@ -1,6 +1,6 @@
 # Outfit Canvas
 
-An interactive surface where users arrange [Items](../domain/item.md) to compose an [Outfit](../domain/outfit.md).
+An interactive surface where users arrange [Items](/domain/item) to compose an [Outfit](/domain/outfit).
 
 ## Purpose
 
@@ -9,7 +9,7 @@ Let users visually combine clothing pieces into a look by dragging and positioni
 ## Behavior
 
 - User adds items to the canvas from their wardrobe.
-- Each item is displayed as a cutout image (background already removed by [AI Recognition](ai-recognition.md)).
+- Each item is displayed as a cutout image (background already removed by [AI Recognition](/features/ai-recognition)).
 - Items can be repositioned via drag-and-drop.
 - Canvas state is persisted on save.
 

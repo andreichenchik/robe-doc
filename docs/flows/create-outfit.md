@@ -12,9 +12,9 @@ User initiates "create outfit" action.
 
 ## Steps
 
-1. **Select items** — User picks [Items](../domain/item.md) from their wardrobe to include in the outfit.
-2. **Arrange on canvas** — Selected items appear on the [Outfit Canvas](../features/outfit-canvas.md). User positions them via drag-and-drop.
-3. **Save** — The [Outfit](../domain/outfit.md) is saved with its canvas state.
+1. **Select items** — User picks [Items](/domain/item) from their wardrobe to include in the outfit.
+2. **Arrange on canvas** — Selected items appear on the [Outfit Canvas](/features/outfit-canvas). User positions them via drag-and-drop.
+3. **Save** — The [Outfit](/domain/outfit) is saved with its canvas state.
 
 ## Result
 

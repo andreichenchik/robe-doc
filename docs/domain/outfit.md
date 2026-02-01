@@ -1,13 +1,13 @@
 # Outfit
 
-A combination of [Items](item.md) arranged together to represent a look. Users create outfits by placing items on an interactive [canvas](../features/outfit-canvas.md).
+A combination of [Items](/domain/item) arranged together to represent a look. Users create outfits by placing items on an interactive [canvas](/features/outfit-canvas).
 
 ## Attributes
 
 | Attribute | Type | Description |
 |-----------|------|-------------|
 | Canvas data | CanvasState | Positions, scales, and rotations of items on the canvas. Uses normalized coordinates for multi-screen support. |
-| Items | [Item](item.md)[] | The clothing pieces included in this outfit. |
+| Items | [Item](/domain/item)[] | The clothing pieces included in this outfit. |
 
 > [!NOTE]
 > **Undefined — requires clarification:**
@@ -20,8 +20,8 @@ A combination of [Items](item.md) arranged together to represent a look. Users c
 
 ## Relationships
 
-- An Outfit belongs to one [User](user.md).
-- An Outfit contains one or more [Items](item.md).
+- An Outfit belongs to one [User](/domain/user).
+- An Outfit contains one or more [Items](/domain/item).
 - An Outfit may belong to a collection.
 
 > [!NOTE]

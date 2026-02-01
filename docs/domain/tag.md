@@ -1,6 +1,6 @@
 # Tag
 
-A user-defined label attached to [Items](item.md) for flexible organization beyond the [Category](category.md) hierarchy.
+A user-defined label attached to [Items](/domain/item) for flexible organization beyond the [Category](/domain/category) hierarchy.
 
 Tags allow users to create their own groupings (e.g. "summer", "work", "favorites", "to donate").
 
@@ -19,8 +19,8 @@ Tags allow users to create their own groupings (e.g. "summer", "work", "favorite
 
 ## Relationships
 
-- A Tag can be attached to zero or more [Items](item.md).
-- Tags are used as a filter dimension in [Wardrobe Filtering](../features/wardrobe-filtering.md).
+- A Tag can be attached to zero or more [Items](/domain/item).
+- Tags are used as a filter dimension in [Wardrobe Filtering](/features/wardrobe-filtering).
 
 ## Business Rules
 

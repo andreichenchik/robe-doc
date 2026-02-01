@@ -1,6 +1,6 @@
 # Onboarding
 
-The flow a new or signed-out [User](../domain/user.md) goes through when they open the app.
+The flow a new or signed-out [User](/domain/user) goes through when they open the app.
 
 ## Trigger
 

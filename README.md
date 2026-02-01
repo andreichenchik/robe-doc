@@ -1,4 +1,4 @@
-# ROBE
+# ROBE Documentation
 
 ROBE is a mobile application for digital wardrobe management. The app helps users create a digital copy of their real wardrobe, organize clothing items, and compose outfits.
 
