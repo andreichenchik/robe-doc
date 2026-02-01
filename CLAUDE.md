@@ -88,7 +88,7 @@ Before committing, verify that all related parts of the documentation are consis
 
 ## Pull Request Merge
 
-When asked to merge a PR, wait for all checks to finish (`gh pr checks <number> --watch --fail-fast`), then:
+When asked to merge a PR, wait for all checks to finish (`gh pr checks <number> --watch`, timeout 10 min), then:
 
 - **All checks pass, no review comments** — merge with `--squash`.
 - **Review comments exist** — read them, summarize for the user, and ask whether to apply changes or merge as-is.
