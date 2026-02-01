@@ -86,6 +86,14 @@ Before committing, verify that all related parts of the documentation are consis
 - Cross-links in other files still point to valid targets.
 - Existing docs that reference the changed concept are updated if needed.
 
+## Pull Request Merge
+
+When asked to merge a PR, wait for all checks to finish (`gh pr checks <number> --watch --fail-fast`), then:
+
+- **All checks pass, no review comments** — merge with `--squash`.
+- **Review comments exist** — read them, summarize for the user, and ask whether to apply changes or merge as-is.
+- **Checks fail** — report the failure and ask how to proceed.
+
 ## Docsify Setup
 
 Local development:
