@@ -89,10 +89,10 @@ Before committing, verify that all related parts of the documentation are consis
 
 ## Pull Request Merge
 
-When asked to merge a PR, wait for all checks to finish (`gh pr checks <number> --watch`, timeout 10 min), then:
+When asked to merge a PR, wait for all checks to finish (`gh pr checks <number> --watch`, timeout 10 min), then check for feedback using `gh api repos/{owner}/{repo}/pulls/{number}/reviews` and `gh api repos/{owner}/{repo}/pulls/{number}/comments`:
 
-- **All checks pass, no review comments** — merge with `--squash`.
-- **Review comments exist** — read them, summarize for the user, and ask whether to apply changes or merge as-is.
+- **All checks pass, no feedback (or only approved reviews)** — merge with `--squash`.
+- **Reviews with comments or requested changes exist** — read them, summarize for the user, and ask whether to apply changes or merge as-is.
 - **Checks fail** — report the failure and ask how to proceed.
 
 ## Docsify Setup
