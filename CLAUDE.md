@@ -52,7 +52,7 @@ Focus on: trigger, steps, decision points, success/failure outcomes.
 - **Abstract from tech stack.** Documentation describes *what* the product does, not *how* it is implemented. Do not mention specific technologies, frameworks, databases, or APIs. Write so that the documentation remains valid regardless of the underlying implementation.
 
 - One file = one concept. Split when a file grows beyond its scope.
-- Link between files using relative paths: `[Item](../domain/item.md)`
+- Use absolute paths from docs root without `.md` extension for cross-links: `[Item](/domain/item)`, `[AI Recognition](/features/ai-recognition)`.
 - Keep `_sidebar.md` updated — it defines site navigation.
 - Write for someone who has never seen the app. Be specific enough that a developer could implement from the description.
 - When something is unclear or undefined, note it explicitly rather than guessing.

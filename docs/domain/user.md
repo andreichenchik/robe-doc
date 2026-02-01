@@ -1,6 +1,6 @@
 # User
 
-A person who uses the app to manage their wardrobe. User is the owner of all [Items](item.md), [Outfits](outfit.md), and other personal data in the system.
+A person who uses the app to manage their wardrobe. User is the owner of all [Items](/domain/item), [Outfits](/domain/outfit), and other personal data in the system.
 
 ## Attributes
 
@@ -17,8 +17,8 @@ A person who uses the app to manage their wardrobe. User is the owner of all [It
 
 ## Relationships
 
-- A User owns zero or more [Items](item.md).
-- A User owns zero or more [Outfits](outfit.md).
+- A User owns zero or more [Items](/domain/item).
+- A User owns zero or more [Outfits](/domain/outfit).
 
 ## Business Rules
 

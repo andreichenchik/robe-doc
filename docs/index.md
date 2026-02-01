@@ -11,6 +11,6 @@ ROBE is an iOS application for digital wardrobe management. The app helps users 
 
 ## How to Use This Documentation
 
-- **[Domain](domain/item.md)** — data model: what entities exist and how they relate.
-- **[Features](features/ai-recognition.md)** — what the product can do.
-- **[Flows](flows/add-item.md)** — how users accomplish their goals step by step.
+- **[Domain](/domain/item)** — data model: what entities exist and how they relate.
+- **[Features](/features/ai-recognition)** — what the product can do.
+- **[Flows](/flows/add-item)** — how users accomplish their goals step by step.

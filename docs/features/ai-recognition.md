@@ -1,6 +1,6 @@
 # AI Recognition
 
-Automatically detects clothing attributes from a photo when a user adds a new [Item](../domain/item.md) to their wardrobe.
+Automatically detects clothing attributes from a photo when a user adds a new [Item](/domain/item) to their wardrobe.
 
 ## Purpose
 
@@ -14,7 +14,7 @@ Reduce manual effort when adding items. Instead of filling in every field by han
 
 ### Background Removal
 - Automatically removes the background from the clothing photo.
-- Produces a clean cutout image used in the wardrobe and on the [outfit canvas](outfit-canvas.md).
+- Produces a clean cutout image used in the wardrobe and on the [outfit canvas](/features/outfit-canvas).
 
 ### Color Detection
 - Identifies the dominant color of the garment.
