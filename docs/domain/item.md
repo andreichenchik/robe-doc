@@ -4,19 +4,33 @@ A clothing piece in the user's digital wardrobe. Item is the central entity of t
 
 ## Properties
 
-- **Photo** — user-provided photo of the clothing piece. Background is removed automatically by [AI Recognition](../features/ai-recognition.md).
-- **Type** — specific kind of clothing. Detected by [AI Recognition](../features/ai-recognition.md).
-- **Category** — high-level grouping. See [Category](./category.md). Detected by [AI Recognition](../features/ai-recognition.md) or assigned manually.
-- **Color** — dominant color of the garment. Detected by [AI Recognition](../features/ai-recognition.md).
+- **Photo** — user-provided photo of the clothing piece. Background is removed by [Background Removal](../features/background-removal.md).
+- **Type** — specific kind of clothing (e.g. t-shirt, jeans, dress).
+- **Category** — high-level grouping. See [Category](./category.md).
+- **Color** — dominant color of the garment.
+- **Brand** — brand of the garment.
 - **Collections** — user-defined groupings for organization. See [Collection](./collection.md).
+
+All attributes are auto-detected or suggested by [AI Recognition](../features/ai-recognition.md) on creation and can be edited by the user.
 
 > [!NOTE]
 > **Undefined — requires clarification:**
-> - Full list of Item properties (name, brand, season, size, notes, etc.).
+> - Full list of remaining Item properties (name, season, size, notes, etc.).
 > - Whether Type is a free-form string or a fixed enum.
 > - How the processed (background-removed) image relates to the original photo — are both stored?
 > - Whether Item has a creation date, last-modified date, or other metadata.
 > - What happens when an Item is deleted but it belongs to one or more [Outfits](./outfit.md).
+
+## Processing Status
+
+When a new item is added via the [Add Item](../flows/add-item.md) flow, it goes through a processing pipeline. The item appears in the wardrobe immediately, and its status is visible to the user:
+
+1. **Processing** — [Background Removal](../features/background-removal.md) is running.
+2. **Uploading** — the processed photo is being uploaded.
+3. **Classifying** — [AI Recognition](../features/ai-recognition.md) is detecting attributes.
+4. **Classified** — all processing is done; the item is fully ready for viewing and editing.
+
+The user can interact with other items and navigate the app while processing runs in the background.
 
 ## Relationships
 
@@ -28,7 +42,6 @@ A clothing piece in the user's digital wardrobe. Item is the central entity of t
 ## Business Rules
 
 - An Item must have a photo.
-- Type and Category are auto-detected by AI on creation, but can be edited by the user.
 
 > [!NOTE]
 > **Undefined — requires clarification:**

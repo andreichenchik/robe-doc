@@ -1,31 +1,35 @@
 # Add Item
 
-The flow of adding a new clothing piece to the user's wardrobe.
+The flow of adding new clothing pieces to the user's wardrobe. A photo is the starting point for every item — it serves as the visual basis the user interacts with.
 
 ## Trigger
 
 User initiates "add item" action from the wardrobe screen.
 
-## Steps
+## Photo Selection
 
-1. **Capture photo** — User takes a photo or selects one from the photo library.
-2. **AI processing** — [AI Recognition](../features/ai-recognition.md) removes the background and detects clothing attributes.
-3. **Review & edit** — User sees the AI-detected attributes and can confirm or correct them.
-4. **Add to collections** — User optionally assigns [Collections](../domain/collection.md).
-5. **Save** — The [Item](../domain/item.md) is saved to the wardrobe.
+The user provides photos in one of two ways:
+
+- **Gallery** — select one or more photos from the device photo library. The user confirms the selection, and each photo becomes a separate [Item](../domain/item.md).
+- **Camera** — take a single photo. The user can review the result and retake if needed. When the device is held at an angle far from both horizontal and vertical, an overlay dims the screen to hint that the phone should be held upright or flat. The overlay does not block capture.
+
+Photo selection is the only decision point in the flow. Once the user confirms, items are created immediately and the process cannot be cancelled.
+
+## Processing Pipeline
+
+After confirmation, each item appears in the wardrobe right away with a visible [processing status](../domain/item.md#processing-status). The entire pipeline runs automatically without user intervention:
+
+1. **Background removal** — [Background Removal](../features/background-removal.md) strips the background and produces a transparent cutout image.
+2. **Upload** — the processed photo is uploaded.
+3. **AI classification** — [AI Recognition](../features/ai-recognition.md) detects type, category, color, and brand, and suggests [Collections](../domain/collection.md).
+
+When multiple photos are selected from the gallery, all items are processed in parallel.
+
+There is no confirmation screen for recognition results. Attributes are applied automatically as they become available. The user can edit them later from the item screen.
 
 ## Result
 
-A new Item appears in the user's wardrobe with a clean cutout photo and populated attributes.
-
-> [!NOTE]
-> **Undefined — requires clarification:**
-> - Can the user add multiple items at once (batch mode)?
-> - What does the review screen look like — which fields are editable?
-> - Is there a loading/progress indicator during AI processing?
-> - Can the user skip AI recognition and fill in attributes manually?
-> - What happens if the user cancels mid-flow — is a draft saved?
-> - Is there a confirmation screen before final save?
+New items appear in the wardrobe with clean cutout photos and populated attributes.
 
 ## Error Scenarios
 

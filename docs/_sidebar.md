@@ -15,6 +15,7 @@
 
 - **Features**
   - [AI Recognition](/features/ai-recognition.md)
+  - [Background Removal](/features/background-removal.md)
   - [Wardrobe Filtering](/features/wardrobe-filtering.md)
   - [Outfit Collage](/features/outfit-collage.md)
   - [Profile](/features/profile.md)

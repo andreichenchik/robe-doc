@@ -9,7 +9,7 @@ Let users visually combine clothing pieces into a look by dragging and positioni
 ## Behavior
 
 - User adds items to the collage from their wardrobe.
-- Each item is displayed as a cutout image (background already removed by [AI Recognition](./ai-recognition.md)).
+- Each item is displayed as a cutout image (background already removed by [Background Removal](./background-removal.md)).
 - Items can be repositioned via drag-and-drop.
 - Collage state is persisted on save.
 

@@ -1,6 +1,6 @@
 # AI Recognition
 
-Automatically detects clothing attributes from a photo when a user adds a new [Item](../domain/item.md) to their wardrobe.
+Automatically detects clothing attributes from a photo. Requires a background-removed image as input (see [Background Removal](./background-removal.md)).
 
 ## Purpose
 
@@ -9,22 +9,31 @@ Reduce manual effort when adding items. Instead of filling in every field by han
 ## Capabilities
 
 ### Clothing Classification
+
 - Detects **type** of garment (e.g. t-shirt, jeans, dress).
 - Detects **category** (e.g. tops, bottoms, footwear).
 
-### Background Removal
-- Automatically removes the background from the clothing photo.
-- Produces a clean cutout image used in the wardrobe and on the [outfit collage](./outfit-collage.md).
-
 ### Color Detection
+
 - Identifies the dominant color of the garment.
+
+### Brand Detection
+
+- Attempts to match the brand from the user's existing brand list.
+- Least accurate classifier — brand is difficult to determine from a photo alone.
+
+### Collection Suggestion
+
+- Suggests existing user [Collections](../domain/collection.md) that the item may belong to.
+
+## User Override
+
+All AI-detected attributes (type, category, color, brand, collections) can be reviewed and corrected by the user after classification completes.
 
 > [!NOTE]
 > **Undefined — requires clarification:**
-> - What attributes beyond type, category, and color does the AI detect (material, pattern, season, style)?
+> - What attributes beyond type, category, color, and brand does the AI detect (material, pattern, season, style)?
 > - What happens when AI classification fails or returns low confidence?
-> - Can the user override or correct AI results? (Assumed yes, but flow undefined.)
-> - Is recognition synchronous (user waits) or asynchronous (can continue while processing)?
 
 ## Error Handling
 
