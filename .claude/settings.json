@@ -11,6 +11,7 @@
       "Bash(git pull:*)",
       "Bash(gh run view:*)",
       "Bash(gh pr:*)",
+      "Bash(gh issue:*)",
       "Bash(npx docsify-cli serve:*)"
     ]
   }
