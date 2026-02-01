@@ -4,11 +4,9 @@ A user-defined label attached to [Items](/domain/item) for flexible organization
 
 Tags allow users to create their own groupings (e.g. "summer", "work", "favorites", "to donate").
 
-## Attributes
+## Properties
 
-| Attribute | Type | Description |
-|-----------|------|-------------|
-| Name | String | The label text. |
+- **Name** — the label text displayed on the tag.
 
 > [!NOTE]
 > **Undefined — requires clarification:**

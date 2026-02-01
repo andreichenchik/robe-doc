@@ -2,12 +2,10 @@
 
 A combination of [Items](/domain/item) arranged together to represent a look. Users create outfits by placing items on an interactive [canvas](/features/outfit-canvas).
 
-## Attributes
+## Properties
 
-| Attribute | Type | Description |
-|-----------|------|-------------|
-| Canvas data | CanvasState | Positions, scales, and rotations of items on the canvas. Uses normalized coordinates for multi-screen support. |
-| Items | [Item](/domain/item)[] | The clothing pieces included in this outfit. |
+- **Canvas data** — positions, scales, and rotations of items on the canvas. Uses normalized coordinates for multi-screen support.
+- **Items** — the clothing pieces included in this outfit. See [Item](/domain/item).
 
 > [!NOTE]
 > **Undefined — requires clarification:**

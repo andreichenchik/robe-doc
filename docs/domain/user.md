@@ -2,11 +2,9 @@
 
 A person who uses the app to manage their wardrobe. User is the owner of all [Items](/domain/item), [Outfits](/domain/outfit), and other personal data in the system.
 
-## Attributes
+## Properties
 
-| Attribute | Type | Description |
-|-----------|------|-------------|
-| Apple ID | External ID | Identifier from Apple sign-in. Used for authentication. |
+- **Apple ID** — identifier from Apple sign-in. Used for authentication.
 
 > [!NOTE]
 > **Undefined — requires clarification:**
