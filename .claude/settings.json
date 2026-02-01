@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git push:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git checkout:*)",
+      "Bash(git fetch:*)",
+      "Bash(git mv:*)",
+      "Bash(git rebase:*)",
+      "Bash(git pull:*)",
+      "Bash(gh run view:*)",
+      "Bash(gh pr:*)",
+      "Bash(npx docsify-cli serve:*)"
+    ]
+  }
+}
