@@ -9,7 +9,7 @@ User opens the app for the first time or after signing out.
 ## Steps
 
 1. **Welcome screen** — A single page showing the app logo and main slogan.
-2. **Sign in** — User authenticates using Apple ID.
+2. **Sign in** — [User](../domain/user.md) authenticates with their account.
 
 ## Result
 

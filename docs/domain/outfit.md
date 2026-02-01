@@ -7,12 +7,12 @@ A combination of [Items](./item.md) arranged together to represent a look. Users
 - **Collage data** — positions, scales, and rotations of items on the collage. Uses normalized coordinates for multi-screen support.
 - **Items** — the clothing pieces included in this outfit. See [Item](./item.md).
 - **Photo** — an optional user-taken photo of the outfit being worn (e.g. a mirror selfie). Separate from the collage.
+- **Collections** — user-defined groupings for organization. See [Collection](./collection.md).
 
 > [!NOTE]
 > **Undefined — requires clarification:**
 > - Does an Outfit have a name or title?
 > - Is there an Outfit description or notes field?
-> - Does Outfit belong to a collection?
 > - What is the minimum number of items in an Outfit?
 > - What metadata is stored (creation date, etc.)?
 > - Can an Outfit have multiple photos?
@@ -22,11 +22,7 @@ A combination of [Items](./item.md) arranged together to represent a look. Users
 
 - An Outfit belongs to one [User](./user.md).
 - An Outfit contains one or more [Items](./item.md).
-- An Outfit may belong to a collection.
-
-> [!NOTE]
-> **Undefined — requires clarification:**
-> - What is a "collection"? Is it a separate entity or just a tag/label on Outfits?
+- An Outfit can belong to zero or more [Collections](./collection.md).
 
 ## Collage Data Model
 

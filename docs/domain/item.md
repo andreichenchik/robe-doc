@@ -4,11 +4,11 @@ A clothing piece in the user's digital wardrobe. Item is the central entity of t
 
 ## Properties
 
-- **Photo** — user-provided photo of the clothing piece. Background is removed automatically after upload.
-- **Type** — specific kind of clothing (e.g. t-shirt, jeans, sneakers). Detected by [AI Recognition](../features/ai-recognition.md).
-- **Category** — high-level grouping such as tops, bottoms, or shoes. See [Category](./category.md). Detected by AI or assigned manually.
-- **Color** — dominant color of the garment. Detected automatically.
-- **Tags** — user-defined labels for organization. See [Tag](./tag.md).
+- **Photo** — user-provided photo of the clothing piece. Background is removed automatically by [AI Recognition](../features/ai-recognition.md).
+- **Type** — specific kind of clothing. Detected by [AI Recognition](../features/ai-recognition.md).
+- **Category** — high-level grouping. See [Category](./category.md). Detected by [AI Recognition](../features/ai-recognition.md) or assigned manually.
+- **Color** — dominant color of the garment. Detected by [AI Recognition](../features/ai-recognition.md).
+- **Collections** — user-defined groupings for organization. See [Collection](./collection.md).
 
 > [!NOTE]
 > **Undefined — requires clarification:**
@@ -22,7 +22,7 @@ A clothing piece in the user's digital wardrobe. Item is the central entity of t
 
 - An Item belongs to one [User](./user.md).
 - An Item belongs to one [Category](./category.md).
-- An Item can have zero or more [Tags](./tag.md).
+- An Item can have zero or more [Collections](./collection.md).
 - An Item can appear in zero or more [Outfits](./outfit.md).
 
 ## Business Rules
@@ -33,5 +33,5 @@ A clothing piece in the user's digital wardrobe. Item is the central entity of t
 > [!NOTE]
 > **Undefined — requires clarification:**
 > - Can an Item exist without a Category?
-> - Is there a limit on how many Tags an Item can have?
+> - Is there a limit on how many Collections an Item can have?
 > - Can an Item appear multiple times in the same Outfit?
