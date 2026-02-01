@@ -1,15 +1,22 @@
 # CLAUDE.md
 
-This repository contains product documentation for a smart digital wardrobe mobile application.
+This repository contains product documentation for ROBE — a mobile application for digital wardrobe management.
 
 ## Product Overview
 
-A mobile app that helps users manage their clothing inventory and create outfits. Core capabilities:
+The app helps users solve two everyday problems:
 
-- **Wardrobe management** — add, edit, organize clothing items
-- **AI recognition** — automatic detection of clothing type, category, and attributes when adding items
-- **Outfit creation** — combine items into outfits with collages and photos
-- **Filtering & search** — find items by category, type, color, etc.
+**"What should I wear today?"** — The outfits screen gives users a library of their saved looks. Each Outfit can include a collage showing how the pieces go together and a photo of the outfit being worn, so the user can quickly pick a look and go.
+
+**"What can I put together?"** — When users want to create something new, the wardrobe acts as a visual browser of everything they own. Quick scanning and filtering by category, type, or color lets users see what is available and find combinations they haven't tried.
+
+Both problems are wardrobe management at their core. The app takes an AI-first approach to remove friction — from recognizing clothing in a photo to organizing and browsing items — so that managing a wardrobe feels effortless.
+
+### How It Works
+
+- **Wardrobe management** — add, edit, and organize clothing items. AI recognition detects clothing type, category, and attributes from a photo, so adding items is fast.
+- **Outfit creation** — combine items into outfits using an interactive collage and capture a photo of the look.
+- **Filtering & search** — find items by category, type, color, and tags to quickly browse what you have.
 
 
 ## Documentation Structure
@@ -42,7 +49,7 @@ Focus on: attributes, relationships, constraints, edge cases (what happens when 
 
 Describes what the product can do. Each feature is a distinct capability that delivers value to the user.
 
-Examples: item recognition, wardrobe filtering, outfit collage generation.
+Examples: item recognition, wardrobe filtering, outfit collage.
 
 Focus on: purpose, behavior, UI elements, error handling.
 

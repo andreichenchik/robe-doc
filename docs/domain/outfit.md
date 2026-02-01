@@ -1,20 +1,22 @@
 # Outfit
 
-A combination of [Items](/domain/item) arranged together to represent a look. Users create outfits by placing items on an interactive [canvas](/features/outfit-canvas).
+A combination of [Items](/domain/item) arranged together to represent a look. Users create outfits by placing items on an interactive [collage](/features/outfit-collage).
 
 ## Properties
 
-- **Canvas data** — positions, scales, and rotations of items on the canvas. Uses normalized coordinates for multi-screen support.
+- **Collage data** — positions, scales, and rotations of items on the collage. Uses normalized coordinates for multi-screen support.
 - **Items** — the clothing pieces included in this outfit. See [Item](/domain/item).
+- **Photo** — an optional user-taken photo of the outfit being worn (e.g. a mirror selfie). Separate from the collage.
 
 > [!NOTE]
 > **Undefined — requires clarification:**
 > - Does an Outfit have a name or title?
-> - Can an Outfit have a cover photo / generated collage image?
 > - Is there an Outfit description or notes field?
-> - Does Outfit belong to a collection? (README mentions "outfit collections".)
+> - Does Outfit belong to a collection?
 > - What is the minimum number of items in an Outfit?
 > - What metadata is stored (creation date, etc.)?
+> - Can an Outfit have multiple photos?
+> - Is the photo taken within the app or imported from the gallery?
 
 ## Relationships
 
@@ -26,12 +28,12 @@ A combination of [Items](/domain/item) arranged together to represent a look. Us
 > **Undefined — requires clarification:**
 > - What is a "collection"? Is it a separate entity or just a tag/label on Outfits?
 
-## Canvas Data Model
+## Collage Data Model
 
-Each item on the canvas has a position stored in normalized coordinates (0.0–1.0), allowing consistent rendering across different screen sizes.
+Each item on the collage has a position stored in normalized coordinates (0.0–1.0), allowing consistent rendering across different screen sizes.
 
 > [!NOTE]
 > **Undefined — requires clarification:**
-> - Exact structure of canvas item data (position, scale, rotation, z-index).
-> - How canvas state is serialized and stored.
-> - Whether there's a limit on items per canvas.
+> - Exact structure of collage item data (position, scale, rotation, z-index).
+> - How collage state is serialized and stored.
+> - Whether there's a limit on items per collage.

@@ -16,7 +16,7 @@
 - **Features**
   - [AI Recognition](features/ai-recognition.md)
   - [Wardrobe Filtering](features/wardrobe-filtering.md)
-  - [Outfit Canvas](features/outfit-canvas.md)
+  - [Outfit Collage](features/outfit-collage.md)
   - [Profile](features/profile.md)
 
 - **Flows**

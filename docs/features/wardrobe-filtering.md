@@ -4,7 +4,7 @@ Allows users to find [Items](/domain/item) in their wardrobe by applying filters
 
 ## Purpose
 
-As the wardrobe grows, users need a fast way to locate specific items. Filtering narrows down the item list by one or more dimensions.
+The wardrobe serves as a visual browser of everything the user owns. Its primary value is letting users quickly scan their items, get a visual overview, and spark ideas for new outfit combinations. Filtering narrows down the view by one or more dimensions, making it easy to answer questions like "what tops do I have?" or "which outerwear is available?".
 
 ## Filter Dimensions
 
