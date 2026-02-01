@@ -74,6 +74,8 @@ fix/<topic>     — fixes (typos, broken links, script bugs)
 
 Examples: `docs/add-onboarding-guide`, `auto/lint-markdown`, `fix/broken-links`.
 
+Each logically distinct change should be submitted as a separate pull request. Do not combine unrelated changes in one PR.
+
 ## Docsify Setup
 
 Local development:
