@@ -12,7 +12,7 @@ How users sign in and identify themselves. Affects onboarding complexity, accoun
 - Is sign-in required to use the app, or only for sync features?
 - Account deletion flow and data retention after deletion.
 
-See also: [Onboarding](/flows/onboarding).
+See also: [Onboarding](../flows/onboarding.md).
 
 ---
 

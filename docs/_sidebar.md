@@ -1,25 +1,25 @@
 - [ROBE Documentation](/)
 
 - **Constraints**
-  - [Platform](constraints/platform.md)
-  - [Localization](constraints/localization.md)
-  - [Data & Sync](constraints/data-sync.md)
-  - [Open Questions](constraints/open-questions.md)
+  - [Platform](/constraints/platform.md)
+  - [Localization](/constraints/localization.md)
+  - [Data & Sync](/constraints/data-sync.md)
+  - [Open Questions](/constraints/open-questions.md)
 
 - **Domain**
-  - [Item](domain/item.md)
-  - [Outfit](domain/outfit.md)
-  - [Category](domain/category.md)
-  - [Tag](domain/tag.md)
-  - [User](domain/user.md)
+  - [Item](/domain/item.md)
+  - [Outfit](/domain/outfit.md)
+  - [Category](/domain/category.md)
+  - [Tag](/domain/tag.md)
+  - [User](/domain/user.md)
 
 - **Features**
-  - [AI Recognition](features/ai-recognition.md)
-  - [Wardrobe Filtering](features/wardrobe-filtering.md)
-  - [Outfit Collage](features/outfit-collage.md)
-  - [Profile](features/profile.md)
+  - [AI Recognition](/features/ai-recognition.md)
+  - [Wardrobe Filtering](/features/wardrobe-filtering.md)
+  - [Outfit Collage](/features/outfit-collage.md)
+  - [Profile](/features/profile.md)
 
 - **Flows**
-  - [Add Item](flows/add-item.md)
-  - [Create Outfit](flows/create-outfit.md)
-  - [Onboarding](flows/onboarding.md)
+  - [Add Item](/flows/add-item.md)
+  - [Create Outfit](/flows/create-outfit.md)
+  - [Onboarding](/flows/onboarding.md)

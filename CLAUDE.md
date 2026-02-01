@@ -4,16 +4,20 @@ When working directory is the repo root, run `git` and other commands directly, 
 
 This repository contains product documentation for ROBE — a mobile application for digital wardrobe management.
 
-## Product Overview
+## Project
 
 @README.md
+
+## Product Overview
+
+@docs/README.md
 
 
 ## Documentation Structure
 
 ```
 docs/
-├── README.md          # Landing page with product vision
+├── README.md          # Product vision and overview
 ├── _sidebar.md       # Docsify navigation (keep in sync with content)
 ├── constraints/      # Non-functional requirements
 ├── domain/           # Data model and business rules
@@ -56,7 +60,7 @@ Focus on: trigger, steps, decision points, success/failure outcomes.
 - **Abstract from tech stack.** Documentation describes *what* the product does, not *how* it is implemented. Do not mention specific technologies, frameworks, databases, or APIs. Write so that the documentation remains valid regardless of the underlying implementation.
 
 - One file = one concept. Split when a file grows beyond its scope.
-- Use absolute paths from docs root without `.md` extension for cross-links: `[Item](/domain/item)`, `[AI Recognition](/features/ai-recognition)`.
+- Use relative paths with `.md` extension for cross-links: `[Category](./category.md)`, `[AI Recognition](../features/ai-recognition.md)`. Paths are relative to the file containing the link.
 - Keep `_sidebar.md` updated — it defines site navigation.
 - Write for someone who has never seen the app. Be specific enough that a developer could implement from the description.
 - **Mark unknowns explicitly.** When something is unclear or undefined, add a `> [!NOTE]` block rather than guessing. These blocks are knowledge gap markers across the documentation. When new information resolves a `> [!NOTE]` block, update or remove it.

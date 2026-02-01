@@ -1,6 +1,6 @@
 # Category
 
-A high-level classification of clothing items. Categories group [Items](/domain/item) into broad types (e.g. tops, bottoms, shoes, accessories).
+A high-level classification of clothing items. Categories group [Items](./item.md) into broad types (e.g. tops, bottoms, shoes, accessories).
 
 ## Structure
 
@@ -15,9 +15,9 @@ Categories form a hierarchy that helps users navigate their wardrobe.
 
 ## Relationships
 
-- A Category contains zero or more [Items](/domain/item).
-- Categories are used as a filter dimension in [Wardrobe Filtering](/features/wardrobe-filtering).
-- Categories are auto-detected by [AI Recognition](/features/ai-recognition).
+- A Category contains zero or more [Items](./item.md).
+- Categories are used as a filter dimension in [Wardrobe Filtering](../features/wardrobe-filtering.md).
+- Categories are auto-detected by [AI Recognition](../features/ai-recognition.md).
 
 ## Business Rules
 

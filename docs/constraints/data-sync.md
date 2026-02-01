@@ -5,7 +5,7 @@ The application follows a **local-first** approach: the device is the primary da
 ## Offline Behavior
 
 - All core functionality — browsing the wardrobe, viewing items, creating and editing outfits — is available without a network connection.
-- Features that rely on server-side processing (e.g. [AI Recognition](/features/ai-recognition)) require a network connection. When the network is unavailable, these features are either deferred or disabled.
+- Features that rely on server-side processing (e.g. [AI Recognition](../features/ai-recognition.md)) require a network connection. When the network is unavailable, these features are either deferred or disabled.
 
 ## Cloud Sync
 
