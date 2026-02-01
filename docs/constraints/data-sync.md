@@ -19,6 +19,6 @@ The backend serves as a secondary copy. The local device is the source of truth 
 > [!NOTE]
 > **Undefined — requires clarification:**
 > - Conflict resolution strategy when the same data is modified on multiple devices.
-> - What exactly is synced (items, outfits, tags, preferences, photos)?
+> - What exactly is synced (items, outfits, collections, preferences, photos)?
 > - Whether sync happens in real-time, periodically, or on specific triggers.
 > - Behavior when sync fails or is interrupted.
