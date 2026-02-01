@@ -14,7 +14,7 @@ Reduce manual effort when adding items. Instead of filling in every field by han
 
 ### Background Removal
 - Automatically removes the background from the clothing photo.
-- Produces a clean cutout image used in the wardrobe and on the [outfit canvas](/features/outfit-canvas).
+- Produces a clean cutout image used in the wardrobe and on the [outfit collage](/features/outfit-collage).
 
 ### Color Detection
 - Identifies the dominant color of the garment.

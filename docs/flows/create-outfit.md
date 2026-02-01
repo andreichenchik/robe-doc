@@ -13,8 +13,8 @@ User initiates "create outfit" action.
 ## Steps
 
 1. **Select items** — User picks [Items](/domain/item) from their wardrobe to include in the outfit.
-2. **Arrange on canvas** — Selected items appear on the [Outfit Canvas](/features/outfit-canvas). User positions them via drag-and-drop.
-3. **Save** — The [Outfit](/domain/outfit) is saved with its canvas state.
+2. **Arrange on collage** — Selected items appear on the [Outfit Collage](/features/outfit-collage). User positions them via drag-and-drop.
+3. **Save** — The [Outfit](/domain/outfit) is saved with its collage state.
 
 ## Result
 
@@ -23,7 +23,7 @@ A new Outfit is created and visible in the user's outfit list.
 > [!NOTE]
 > **Undefined — requires clarification:**
 > - Can the user name the outfit?
-> - Can items be added/removed from the canvas after the initial selection?
+> - Can items be added/removed from the collage after the initial selection?
 > - Is there an outfit preview or thumbnail generated automatically?
 > - Can the user assign the outfit to a collection?
 > - Can the user share the outfit (export as image)?
@@ -33,6 +33,6 @@ A new Outfit is created and visible in the user's outfit list.
 
 | Scenario | Expected Behavior |
 |----------|------------------|
-| User tries to save empty canvas | *Undefined* |
-| Canvas sync fails | *Undefined* |
+| User tries to save empty collage | *Undefined* |
+| Collage sync fails | *Undefined* |
 | An item in the outfit is later deleted | *Undefined* |

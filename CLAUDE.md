@@ -1,15 +1,12 @@
 # CLAUDE.md
 
-This repository contains product documentation for a smart digital wardrobe mobile application.
+When working directory is the repo root, run `git` and other commands directly, without `-C` or `cd`.
+
+This repository contains product documentation for ROBE — a mobile application for digital wardrobe management.
 
 ## Product Overview
 
-A mobile app that helps users manage their clothing inventory and create outfits. Core capabilities:
-
-- **Wardrobe management** — add, edit, organize clothing items
-- **AI recognition** — automatic detection of clothing type, category, and attributes when adding items
-- **Outfit creation** — combine items into outfits with collages and photos
-- **Filtering & search** — find items by category, type, color, etc.
+@README.md
 
 
 ## Documentation Structure
@@ -42,7 +39,7 @@ Focus on: attributes, relationships, constraints, edge cases (what happens when 
 
 Describes what the product can do. Each feature is a distinct capability that delivers value to the user.
 
-Examples: item recognition, wardrobe filtering, outfit collage generation.
+Examples: item recognition, wardrobe filtering, outfit collage.
 
 Focus on: purpose, behavior, UI elements, error handling.
 
