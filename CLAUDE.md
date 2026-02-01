@@ -18,10 +18,17 @@ A mobile app that helps users manage their clothing inventory and create outfits
 docs/
 ├── README.md          # Landing page with product vision
 ├── _sidebar.md       # Docsify navigation (keep in sync with content)
+├── constraints/      # Non-functional requirements
 ├── domain/           # Data model and business rules
 ├── features/         # Product capabilities
 └── flows/            # User journeys
 ```
+
+### constraints/
+
+Describes non-functional requirements and system-level constraints: platform, localization, data sync strategy, and other cross-cutting concerns.
+
+Focus on: what the system supports, what it does not, and what is yet to be decided.
 
 ### domain/
 
@@ -56,6 +63,16 @@ Focus on: trigger, steps, decision points, success/failure outcomes.
 - Keep `_sidebar.md` updated — it defines site navigation.
 - Write for someone who has never seen the app. Be specific enough that a developer could implement from the description.
 - When something is unclear or undefined, note it explicitly rather than guessing.
+
+## Branch Naming
+
+```
+docs/<topic>    — documentation changes
+auto/<topic>    — scripts, CI/CD, automation
+fix/<topic>     — fixes (typos, broken links, script bugs)
+```
+
+Examples: `docs/add-onboarding-guide`, `auto/lint-markdown`, `fix/broken-links`.
 
 ## Docsify Setup
 
