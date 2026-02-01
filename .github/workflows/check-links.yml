@@ -1,0 +1,11 @@
+name: Check Links
+
+on:
+  push:
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: ./scripts/check-links.py

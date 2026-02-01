@@ -23,6 +23,8 @@ docs/
 ├── domain/           # Data model and business rules
 ├── features/         # Product capabilities
 └── flows/            # User journeys
+scripts/
+└── check-links.py    # Validates internal markdown links
 ```
 
 ### constraints/
@@ -84,7 +86,7 @@ Before committing, verify that all related parts of the documentation are consis
 
 - `_sidebar.md` reflects any added, removed, or renamed pages.
 - `CLAUDE.md` documentation structure tree is up to date.
-- Cross-links in other files still point to valid targets.
+- Cross-links in other files still point to valid targets — run `./scripts/check-links.py` to verify.
 - Existing docs that reference the changed concept are updated if needed.
 
 ## Pull Request Merge
