@@ -1,5 +1,7 @@
 # CLAUDE.md
 
+When working directory is the repo root, run `git` and other commands directly, without `-C` or `cd`.
+
 This repository contains product documentation for ROBE — a mobile application for digital wardrobe management.
 
 ## Product Overview
