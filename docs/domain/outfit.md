@@ -1,11 +1,11 @@
 # Outfit
 
-A combination of [Items](/domain/item) arranged together to represent a look. Users create outfits by placing items on an interactive [collage](/features/outfit-collage).
+A combination of [Items](./item.md) arranged together to represent a look. Users create outfits by placing items on an interactive [collage](../features/outfit-collage.md).
 
 ## Properties
 
 - **Collage data** — positions, scales, and rotations of items on the collage. Uses normalized coordinates for multi-screen support.
-- **Items** — the clothing pieces included in this outfit. See [Item](/domain/item).
+- **Items** — the clothing pieces included in this outfit. See [Item](./item.md).
 - **Photo** — an optional user-taken photo of the outfit being worn (e.g. a mirror selfie). Separate from the collage.
 
 > [!NOTE]
@@ -20,8 +20,8 @@ A combination of [Items](/domain/item) arranged together to represent a look. Us
 
 ## Relationships
 
-- An Outfit belongs to one [User](/domain/user).
-- An Outfit contains one or more [Items](/domain/item).
+- An Outfit belongs to one [User](./user.md).
+- An Outfit contains one or more [Items](./item.md).
 - An Outfit may belong to a collection.
 
 > [!NOTE]

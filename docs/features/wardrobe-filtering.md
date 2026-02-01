@@ -1,6 +1,6 @@
 # Wardrobe Filtering
 
-Allows users to find [Items](/domain/item) in their wardrobe by applying filters and search criteria.
+Allows users to find [Items](../domain/item.md) in their wardrobe by applying filters and search criteria.
 
 ## Purpose
 
@@ -10,10 +10,10 @@ The wardrobe serves as a visual browser of everything the user owns. Its primary
 
 | Dimension | Source |
 |-----------|--------|
-| [Category](/domain/category) | AI-detected or manually assigned |
+| [Category](../domain/category.md) | AI-detected or manually assigned |
 | Type | AI-detected or manually assigned |
 | Color | AI-detected |
-| [Tags](/domain/tag) | User-assigned |
+| [Tags](../domain/tag.md) | User-assigned |
 
 > [!NOTE]
 > **Undefined — requires clarification:**

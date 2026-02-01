@@ -1,6 +1,6 @@
 # Outfit Collage
 
-An interactive surface where users arrange [Items](/domain/item) to compose an [Outfit](/domain/outfit).
+An interactive surface where users arrange [Items](../domain/item.md) to compose an [Outfit](../domain/outfit.md).
 
 ## Purpose
 
@@ -9,7 +9,7 @@ Let users visually combine clothing pieces into a look by dragging and positioni
 ## Behavior
 
 - User adds items to the collage from their wardrobe.
-- Each item is displayed as a cutout image (background already removed by [AI Recognition](/features/ai-recognition)).
+- Each item is displayed as a cutout image (background already removed by [AI Recognition](./ai-recognition.md)).
 - Items can be repositioned via drag-and-drop.
 - Collage state is persisted on save.
 

@@ -9,12 +9,12 @@ User initiates "add item" action from the wardrobe screen.
 ## Steps
 
 1. **Capture photo** — User takes a photo or selects one from the photo library.
-2. **AI processing** — The photo is sent to [AI Recognition](/features/ai-recognition):
+2. **AI processing** — The photo is sent to [AI Recognition](../features/ai-recognition.md):
    - Background is removed.
    - Type, category, and color are detected.
 3. **Review & edit** — User sees the AI-detected attributes and can confirm or correct them.
-4. **Add tags** — User optionally assigns [Tags](/domain/tag).
-5. **Save** — The [Item](/domain/item) is saved to the wardrobe.
+4. **Add tags** — User optionally assigns [Tags](../domain/tag.md).
+5. **Save** — The [Item](../domain/item.md) is saved to the wardrobe.
 
 ## Result
 

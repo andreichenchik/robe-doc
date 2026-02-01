@@ -1,15 +1,17 @@
 # ROBE Documentation
 
-ROBE is a mobile application for digital wardrobe management. It helps users solve two everyday problems:
+This repository contains product documentation for ROBE — a mobile application for digital wardrobe management.
 
-**"What should I wear today?"** — The outfits screen gives users a library of their saved looks. Each [Outfit](/domain/outfit) can include a [collage](/features/outfit-collage) showing how the pieces go together and a photo of the outfit being worn, so the user can quickly pick a look and go.
+See [Product Vision](docs/README.md) for the full product overview.
 
-**"What can I put together?"** — When users want to create something new, the [wardrobe](/features/wardrobe-filtering) acts as a visual browser of everything they own. Quick scanning and filtering by category, type, or color lets users see what is available and find combinations they haven't tried.
+## Documentation Structure
 
-Both problems are wardrobe management at their core. The app takes an AI-first approach to remove friction — from recognizing clothing in a photo to organizing and browsing items — so that managing a wardrobe feels effortless.
+See [CLAUDE.md](CLAUDE.md) for documentation guidelines, writing conventions, and folder structure.
 
-## How It Works
+## Local Development
 
-- **Wardrobe management** — add, edit, and organize clothing items. [AI recognition](/features/ai-recognition) detects clothing type, category, and attributes from a photo, so adding items is fast.
-- **Outfit creation** — combine items into outfits using an interactive [collage](/features/outfit-collage) and capture a photo of the look.
-- **Filtering & search** — find items by category, type, color, and tags to quickly browse what you have.
+Preview the documentation site locally:
+
+```bash
+npx docsify-cli serve docs
+```
