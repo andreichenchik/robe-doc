@@ -10,6 +10,6 @@ Both problems are wardrobe management at their core. The app takes an AI-first a
 
 ## How It Works
 
-- **Wardrobe management** — add, edit, and organize clothing items. [AI recognition](./features/ai-recognition.md) detects clothing type, category, and attributes from a photo, so adding items is fast.
+- **Wardrobe management** — add, edit, and organize clothing items. [AI Classification](./features/ai-classification.md) detects clothing type and attributes from a photo, so adding items is fast.
 - **Outfit creation** — combine items into outfits using an interactive [collage](./features/outfit-collage.md) and capture a photo of the look.
 - **Filtering & search** — find items by category, type, color, and collections to quickly browse what you have.

@@ -9,7 +9,7 @@ Isolate the clothing piece from its surroundings so it can be displayed consiste
 ## Behavior
 
 - Takes the original user photo as input and outputs a transparent cutout containing only the clothing piece.
-- Executes as the first step of the [Add Item](../flows/add-item.md) processing pipeline, before [AI Recognition](./ai-recognition.md).
+- Executes as the first step of the [Add Item](../flows/add-item.md) processing pipeline, before [AI Classification](./ai-classification.md).
 
 > [!NOTE]
 > **Undefined — requires clarification:**

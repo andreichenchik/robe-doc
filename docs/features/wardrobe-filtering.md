@@ -10,9 +10,9 @@ The wardrobe serves as a visual browser of everything the user owns. Its primary
 
 | Dimension | Source |
 |-----------|--------|
-| [Category](../domain/category.md) | AI-detected or manually assigned |
+| [Category](../domain/category.md) | Derived from Type |
 | Type | AI-detected or manually assigned |
-| Color | AI-detected |
+| Color | AI-detected or manually assigned; from a predefined color set |
 | [Collections](../domain/collection.md) | User-assigned |
 
 > [!NOTE]

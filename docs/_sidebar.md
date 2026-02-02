@@ -14,7 +14,7 @@
   - [User](/domain/user.md)
 
 - **Features**
-  - [AI Recognition](/features/ai-recognition.md)
+  - [AI Classification](/features/ai-classification.md)
   - [Background Removal](/features/background-removal.md)
   - [Wardrobe Filtering](/features/wardrobe-filtering.md)
   - [Outfit Collage](/features/outfit-collage.md)
@@ -22,5 +22,6 @@
 
 - **Flows**
   - [Add Item](/flows/add-item.md)
+  - [Edit Item](/flows/edit-item.md)
   - [Create Outfit](/flows/create-outfit.md)
   - [Onboarding](/flows/onboarding.md)

@@ -45,7 +45,7 @@ Focus on: attributes, relationships, constraints, edge cases (what happens when 
 
 Describes what the product can do. Each feature is a distinct capability that delivers value to the user.
 
-Examples: item recognition, wardrobe filtering, outfit collage.
+Examples: AI classification, wardrobe filtering, outfit collage.
 
 Focus on: purpose, behavior, UI elements, error handling.
 
@@ -63,7 +63,7 @@ Focus on: trigger, steps, decision points, success/failure outcomes.
 
 - **Single source of truth.** Define each concept in exactly one place. Other files that mention it should link to the source rather than repeat the description. For example, a flow step should say `[Collections](../domain/collection.md)` instead of re-explaining what a collection is. This keeps updates localized to one file.
 - One file = one concept. Split when a file grows beyond its scope.
-- Use relative paths with `.md` extension for cross-links: `[Category](./category.md)`, `[AI Recognition](../features/ai-recognition.md)`. Paths are relative to the file containing the link.
+- Use relative paths with `.md` extension for cross-links: `[Category](./category.md)`, `[AI Classification](../features/ai-classification.md)`. Paths are relative to the file containing the link.
 - Keep `_sidebar.md` updated — it defines site navigation.
 - Write for someone who has never seen the app. Be specific enough that a developer could implement from the description.
 - **Mark unknowns explicitly.** When something is unclear or undefined, add a `> [!NOTE]` block rather than guessing. These blocks are knowledge gap markers across the documentation. When new information resolves a `> [!NOTE]` block, update or remove it.
