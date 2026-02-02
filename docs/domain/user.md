@@ -4,14 +4,13 @@ A person who uses the app to manage their wardrobe. User is the owner of all [It
 
 ## Properties
 
-- **Apple ID** — identifier from Apple sign-in. Used for authentication.
+- **Apple ID** — identifier from Apple sign-in. Used solely for authentication. No personal information (name, avatar, email) is retrieved or stored from the Apple ID.
+- **Subscription** — determines the user's access level. A subscription unlocks full app functionality: certain features are gated behind a paywall, and the number of [Items](./item.md) a user can create is limited for free users. See [Current Limitations](../constraints/current-limitations.md) for implementation status.
 
 > [!NOTE]
-> **Undefined — requires clarification:**
-> - Does the user have a display name, avatar, or email stored in the app?
-> - Are there any user-level settings or preferences (e.g. default sorting, theme)?
-> - Is there any subscription or plan associated with the user?
-> - What metadata is stored (registration date, last login)?
+> Subscription specifics are not yet defined: which features are gated, what the item limit is, and whether there is a trial period.
+
+The app stores no user metadata — no registration date, last login, display name, or preferences. The only stored association is the link between the Apple ID and the user's data.
 
 ## Relationships
 
@@ -20,11 +19,6 @@ A person who uses the app to manage their wardrobe. User is the owner of all [It
 
 ## Business Rules
 
-- A User must be authenticated via Apple ID to use the app.
-- When a User deletes their account, all associated data is removed.
-
-> [!NOTE]
-> **Undefined — requires clarification:**
-> - Is account deletion immediate or is there a grace period?
-> - What exactly is deleted — only app data, or is the Apple ID link also revoked?
-> - Can a user re-register with the same Apple ID after deletion?
+- A User must be authenticated via Apple ID to use the app. There is no guest or anonymous usage.
+- When a User deletes their account, all associated data is removed — items, outfits, collections, and the user record. Deletion is immediate after the user confirms the action in [Profile](../features/profile.md). See [Current Limitations](../constraints/current-limitations.md) for known gaps in the deletion process.
+- After deletion, the user can re-register with the same Apple ID. This creates a new, empty account with no connection to the previous one.

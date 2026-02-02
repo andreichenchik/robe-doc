@@ -27,3 +27,15 @@ As limitations are resolved, remove them from this list.
 ## AI Collection Suggestion Not Yet Implemented
 
 [AI Classification](../features/ai-classification.md) lists collection suggestion as a capability, and [Collection](../domain/collection.md) describes AI suggesting existing collections during item classification. This feature is not yet implemented — collections are currently assigned manually by the user only.
+
+---
+
+## Subscription Not Yet Implemented
+
+[User](../domain/user.md) describes a subscription model that gates certain features and limits the number of items for free users. Currently, all features are available to all users with no paywall or item limits.
+
+---
+
+## Account Deletion Does Not Clean Up Cloud Data
+
+[User](../domain/user.md) states that all associated data is removed when an account is deleted. Currently, cloud-stored files (item images and other uploads) are not cleaned up during deletion and remain as orphans.

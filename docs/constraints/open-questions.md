@@ -8,9 +8,9 @@ Topics that need to be defined as the product evolves. Each section describes wh
 
 How users sign in and identify themselves. Affects onboarding complexity, account recovery, and data sync.
 
-- Sign-in methods: Apple Sign In, email/password, social login, anonymous usage?
-- Is sign-in required to use the app, or only for sync features?
-- Account deletion flow and data retention after deletion.
+Apple Sign In is the only authentication method, and it is required — there is no guest or anonymous usage. Account deletion is immediate with no data retention. See [User](../domain/user.md) for details.
+
+- What happens if a user loses access to their Apple ID — is there an account recovery path?
 
 See also: [Onboarding](../flows/onboarding.md).
 
@@ -20,9 +20,11 @@ See also: [Onboarding](../flows/onboarding.md).
 
 Whether the system imposes limits on user data. Affects product positioning and infrastructure costs.
 
-- Maximum number of items, outfits, or collections per user.
+Item count is limited for free users and unlimited (or higher) for subscribers. See [User](../domain/user.md).
+
+- What is the specific item limit for free users?
+- Are there limits on outfits or collections?
 - Photo storage limits (size, resolution, count).
-- Whether limits differ by plan (if monetization introduces tiers).
 
 ---
 
@@ -32,18 +34,17 @@ How user data — especially photos — is handled. Affects trust, compliance, a
 
 - Where photos are stored (device only, cloud, or both).
 - What data is sent to external services (e.g. images sent for AI classification).
-- Data retention policy: how long is data kept after account deletion?
 - Whether any data is shared with third parties.
 
 ---
 
 ## Monetization
 
-The business model for the product. Affects feature scoping and which capabilities are gated.
+The business model is freemium with a subscription that unlocks full functionality. See [User](../domain/user.md) for the subscription concept.
 
-- Free, freemium, subscription, or one-time purchase?
-- If freemium: which features are free and which are paid?
-- Trial period or usage limits for premium features.
+- Which specific features are gated behind the paywall?
+- Is there a trial period for the subscription?
+- What is the pricing model (monthly, yearly, both)?
 
 ---
 
