@@ -23,7 +23,7 @@ Collections let users define their own cross-cutting labels (e.g. "sporty", "eve
 
 ## Business Rules
 
-- Collections are created by the user. During item classification, [AI Recognition](../features/ai-recognition.md) can suggest assigning existing collections to a new item, but it does not create new collections.
+- Collections are created by the user. During item classification, [AI Classification](../features/ai-classification.md) can suggest assigning existing collections to a new item, but it does not create new collections.
 - An Item or Outfit can belong to zero or more Collections.
 
 > [!NOTE]

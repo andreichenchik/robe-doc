@@ -21,7 +21,7 @@ After confirmation, each item appears in the wardrobe right away with a visible 
 
 1. **Background removal** — [Background Removal](../features/background-removal.md) strips the background and produces a transparent cutout image.
 2. **Upload** — the processed photo is uploaded.
-3. **AI classification** — [AI Recognition](../features/ai-recognition.md) detects type, category, color, and brand, and suggests [Collections](../domain/collection.md).
+3. **AI classification** — [AI Classification](../features/ai-classification.md) detects type, color, and brand, and suggests [Collections](../domain/collection.md). [Category](../domain/category.md) is derived from the detected type.
 
 When multiple photos are selected from the gallery, all items are processed in parallel.
 

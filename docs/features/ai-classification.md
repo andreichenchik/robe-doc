@@ -1,4 +1,4 @@
-# AI Recognition
+# AI Classification
 
 Automatically detects clothing attributes from a photo. Requires a background-removed image as input (see [Background Removal](./background-removal.md)).
 
@@ -10,12 +10,11 @@ Reduce manual effort when adding items. Instead of filling in every field by han
 
 ### Clothing Classification
 
-- Detects **type** of garment (e.g. t-shirt, jeans, dress).
-- Detects **category** (e.g. tops, bottoms, footwear).
+- Detects **type** of garment (e.g. t-shirt, jeans, dress). [Category](../domain/category.md) is derived from the detected type.
 
 ### Color Detection
 
-- Identifies the dominant color of the garment.
+- Identifies the dominant color of the garment from the predefined color set.
 
 ### Brand Detection
 
@@ -28,11 +27,11 @@ Reduce manual effort when adding items. Instead of filling in every field by han
 
 ## User Override
 
-All AI-detected attributes (type, category, color, brand, collections) can be reviewed and corrected by the user after classification completes.
+All AI-detected attributes (type, color, brand, collections) can be reviewed and corrected by the user after classification completes.
 
 > [!NOTE]
 > **Undefined — requires clarification:**
-> - What attributes beyond type, category, color, and brand does the AI detect (material, pattern, season, style)?
+> - What attributes beyond type, color, and brand does the AI detect (material, pattern, season, style)?
 > - What happens when AI classification fails or returns low confidence?
 
 ## Error Handling

@@ -31,7 +31,7 @@ Whether the system imposes limits on user data. Affects product positioning and 
 How user data — especially photos — is handled. Affects trust, compliance, and feature design.
 
 - Where photos are stored (device only, cloud, or both).
-- What data is sent to external services (e.g. images sent for AI recognition).
+- What data is sent to external services (e.g. images sent for AI classification).
 - Data retention policy: how long is data kept after account deletion?
 - Whether any data is shared with third parties.
 
