@@ -4,6 +4,7 @@
   - [Platform](/constraints/platform.md)
   - [Localization](/constraints/localization.md)
   - [Data & Sync](/constraints/data-sync.md)
+  - [Current Limitations](/constraints/current-limitations.md)
   - [Open Questions](/constraints/open-questions.md)
 
 - **Domain**
