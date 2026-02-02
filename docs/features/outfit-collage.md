@@ -6,12 +6,27 @@ An interactive surface where users arrange [Items](../domain/item.md) to compose
 
 Let users visually combine clothing pieces into a look by dragging and positioning item cutouts on a collage. The collage shows how items look together, helping users evaluate the combination before wearing it.
 
+## Viewing Modes
+
+- **Outfit screen** — displays the collage in read-only mode alongside outfit details.
+- **Collage editor** — accessed from the outfit screen. The user can add, remove, and arrange items (drag, scale, rotate).
+- **Outfit list** — each outfit is previewed by its collage image.
+
 ## Behavior
 
 - User adds items to the collage from their wardrobe.
 - Each item is displayed as a cutout image (background already removed by [Background Removal](./background-removal.md)).
 - Items can be repositioned via drag-and-drop.
+- Items can be scaled using pinch-to-zoom and rotated.
+- Z-order is implicit — touching an item brings it to the top layer. The least recently touched item sits at the bottom. There is no explicit bring-to-front or send-to-back control.
+- The collage has a fixed aspect ratio, consistent across the app.
+- Only items are allowed on the collage — no images, text, stickers, or other decorative elements.
+- The collage must contain at least one item (an empty collage is not possible).
 - Collage state is persisted on save.
+
+> [!NOTE]
+> **Undefined — requires clarification:**
+> - Could the collage support additional content types (text, stickers) in the future?
 
 ## Technical Details
 
@@ -22,8 +37,6 @@ Item positions use the [normalized coordinate system](../domain/outfit.md#collag
 
 > [!NOTE]
 > **Undefined — requires clarification:**
-> - Can items be scaled (pinch-to-zoom) and rotated on the collage?
-> - Is there a z-order control (bring to front / send to back)?
 > - Can the user undo/redo collage actions?
 > - Is the collage state auto-saved or explicitly saved by the user?
 > - Can the collage generate a static image (e.g. for sharing)?
