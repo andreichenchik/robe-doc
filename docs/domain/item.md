@@ -13,7 +13,7 @@ A piece in the user's digital wardrobe. Item is the central entity of the system
 - **Favorite** — marks the item as a favorite.
 - **Collections** — user-defined groupings for organization. See [Collection](./collection.md).
 
-All attributes except Hidden and Favorite are auto-detected or suggested by [AI Classification](../features/ai-classification.md) on creation and can be edited by the user.
+Some attributes are auto-detected by [AI Classification](../features/ai-classification.md) on creation. All attributes can be edited by the user.
 
 > [!NOTE]
 > **Undefined — requires clarification:**

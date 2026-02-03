@@ -7,7 +7,7 @@ A combination of [Items](./item.md) arranged together to represent a look. Users
 - **Name** — optional, empty by default. The user can set it manually. Unlike [Item](./item.md), there is nothing to auto-generate a name from.
 - **Collage data** — positions, scales, and rotations of items on the collage. Uses normalized coordinates for multi-screen support. See [Collage Data Model](#collage-data-model).
 - **Items** — the clothing pieces included in this outfit. An outfit must contain at least one item. See [Item](./item.md).
-- **Photo** — an optional user-taken photo of the outfit being worn (e.g. a mirror selfie). Currently a single photo, separate from the collage.
+- **Photos** — optional user-taken photos of the outfit being worn (e.g. mirror selfies). Separate from the collage. See [Current Limitations](../constraints/current-limitations.md) for implementation status.
 - **Draft** — when enabled, marks the outfit as a work in progress. Drafts appear in the outfit list alongside regular outfits by default. A filter allows showing only drafts.
 - **Favorite** — marks the outfit as a favorite.
 - **Collections** — user-defined groupings for organization. See [Collection](./collection.md).
@@ -16,8 +16,7 @@ A combination of [Items](./item.md) arranged together to represent a look. Users
 > **Undefined — requires clarification:**
 > - Is there an Outfit description or notes field?
 > - What metadata is stored (creation date, etc.)?
-> - Is the photo taken within the app or imported from the gallery?
-> - Could the photo property expand to a gallery (multiple photos per outfit) in the future?
+> - Are photos taken within the app or imported from the device gallery?
 
 ## Relationships
 
