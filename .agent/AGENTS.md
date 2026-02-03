@@ -16,6 +16,9 @@ This repository contains product documentation for ROBE — a mobile application
 ## Documentation Structure
 
 ```
+.agent/
+├── AGENTS.md          # Agent instructions (source of truth)
+└── skills/            # Agent skills
 docs/
 ├── README.md          # Product vision and overview
 ├── _sidebar.md       # Docsify navigation (keep in sync with content)
@@ -85,7 +88,7 @@ Each logically distinct change should be submitted as a separate pull request. D
 Before committing, verify that all related parts of the documentation are consistent with the change:
 
 - `_sidebar.md` reflects any added, removed, or renamed pages.
-- `CLAUDE.md` documentation structure tree is up to date.
+- `.agent/AGENTS.md` documentation structure tree is up to date.
 - Cross-links in other files still point to valid targets — run `./scripts/check-links.py` to verify.
 - Existing docs that reference the changed concept are updated if needed.
 

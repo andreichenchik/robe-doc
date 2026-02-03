@@ -19,7 +19,7 @@ Let users visually combine clothing pieces into a look by dragging and positioni
 - Items can be repositioned via drag-and-drop.
 - Items can be scaled using pinch-to-zoom and rotated.
 - Z-order is implicit — touching an item brings it to the top layer. The least recently touched item sits at the bottom. There is no explicit bring-to-front or send-to-back control.
-- The collage has a fixed aspect ratio, consistent across the app.
+- The collage has a fixed 3.7:5 aspect ratio, consistent across the app.
 - Only items are allowed on the collage — no images, text, stickers, or other decorative elements.
 - The collage must contain at least one item (an empty collage is not possible).
 - Collage state is persisted on save.
@@ -27,6 +27,7 @@ Let users visually combine clothing pieces into a look by dragging and positioni
 > [!NOTE]
 > **Undefined — requires clarification:**
 > - Could the collage support additional content types (text, stickers) in the future?
+> - The aspect ratio may change in future versions.
 
 ## Technical Details
 

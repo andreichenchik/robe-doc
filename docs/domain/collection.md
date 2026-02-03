@@ -2,7 +2,7 @@
 
 A user-created grouping for organizing [Items](./item.md) and [Outfits](./outfit.md) beyond the [Category](./category.md) hierarchy.
 
-Collections let users define their own cross-cutting labels (e.g. "sporty", "evening", "favorites", "to donate"). No collections exist by default — users create them as needed.
+Collections let users define their own cross-cutting labels (e.g. "sporty", "evening", "favorites", "to donate"). Users create collections as needed. The system may also provide predefined starter collections for new users — see [Current Limitations](../constraints/current-limitations.md).
 
 ## Properties
 

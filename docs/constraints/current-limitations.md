@@ -18,9 +18,9 @@ As limitations are resolved, remove them from this list.
 
 ---
 
-## No Default Collections
+## Default Starter Collections Not Yet Implemented
 
-[Collection](../domain/collection.md) states that no collections exist by default. While accurate today, the goal is to provide a set of predefined starter collections for new users so that the wardrobe is useful from the start.
+[Collection](../domain/collection.md) mentions predefined starter collections for new users. Currently, no collections exist by default — users must create all collections manually.
 
 ---
 
@@ -39,3 +39,9 @@ As limitations are resolved, remove them from this list.
 ## Account Deletion Does Not Clean Up Cloud Data
 
 [User](../domain/user.md) states that all associated data is removed when an account is deleted. Currently, cloud-stored files (item images and other uploads) are not cleaned up during deletion and remain as orphans.
+
+---
+
+## Outfit Photo Gallery Not Yet Implemented
+
+[Outfit](../domain/outfit.md) supports multiple photos per outfit. Currently, only a single photo can be attached to an outfit.
