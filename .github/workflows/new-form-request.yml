@@ -47,8 +47,9 @@ jobs:
         with:
           github_token: ${{ secrets.GH_PROJECT_TOKEN }}
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          max_turns: 20
           claude_args: |
-            --allowedTools "Bash(gh issue view:*),Bash(gh issue edit:*),Bash(gh issue comment:*),Bash(gh project item-list:*),Bash(gh project item-edit:*),Bash(gh project field-list:*),Bash(gh project view:*),Read"
+            --allowedTools "Bash(gh issue view:*),Bash(gh issue edit:*),Bash(gh issue comment:*),Bash(gh project item-list:*),Bash(gh project item-edit:*),Bash(gh project field-list:*),Bash(gh project view:*),Bash(gh api:*),Read"
           prompt: |
             Read the file `.agent/prompts/prioritize-issue.md` for instructions.
 
