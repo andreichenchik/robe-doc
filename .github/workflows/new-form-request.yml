@@ -40,13 +40,12 @@ jobs:
             - SERVER_URL = ${{ github.server_url }}
             - REPOSITORY = ${{ github.repository }}
 
-      # Requires a GitHub token with `project` write scope for gh project item-edit.
-      # Set GH_PROJECT_TOKEN secret: fine-grained PAT with Projects read/write permission.
+      # GH_PROJECT_TOKEN: classic PAT with `project` + `public_repo` scopes.
+      # Passed as github_token because the action overrides GH_TOKEN internally.
       - name: Prioritize Issue
         uses: anthropics/claude-code-action@v1
-        env:
-          GH_TOKEN: ${{ secrets.GH_PROJECT_TOKEN }}
         with:
+          github_token: ${{ secrets.GH_PROJECT_TOKEN }}
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           claude_args: |
             --allowedTools "Bash(gh issue view:*),Bash(gh issue edit:*),Bash(gh issue comment:*),Bash(gh project item-list:*),Bash(gh project item-edit:*),Bash(gh project field-list:*),Bash(gh project view:*),Read"
