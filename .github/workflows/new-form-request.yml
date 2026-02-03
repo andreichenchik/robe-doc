@@ -2,7 +2,11 @@ name: New Form Request
 
 on:
   issues:
-    types: [opened, labeled]
+    types: [opened]
+
+concurrency:
+  group: refine-issue-${{ github.event.issue.number }}
+  cancel-in-progress: true
 
 jobs:
   refine:
