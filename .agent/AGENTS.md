@@ -18,6 +18,7 @@ This repository contains product documentation for ROBE — a mobile application
 ```
 .agent/
 ├── AGENTS.md          # Agent instructions (source of truth)
+├── prompts/           # Prompts for GitHub Actions workflows
 └── skills/            # Agent skills
 docs/
 ├── README.md          # Product vision and overview
