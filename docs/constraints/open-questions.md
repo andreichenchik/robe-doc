@@ -10,6 +10,8 @@ How users sign in and identify themselves. Affects onboarding complexity, accoun
 
 Apple Sign In is the only authentication method, and it is required — there is no guest or anonymous usage. Account deletion is immediate with no data retention. See [User](../domain/user.md) for details.
 
+Current limitation: account deletion does not yet fully remove cloud-stored files. See [Current Limitations](./current-limitations.md#account-deletion-does-not-clean-up-cloud-data).
+
 - What happens if a user loses access to their Apple ID — is there an account recovery path?
 
 See also: [Onboarding](../flows/onboarding.md).
@@ -20,7 +22,9 @@ See also: [Onboarding](../flows/onboarding.md).
 
 Whether the system imposes limits on user data. Affects product positioning and infrastructure costs.
 
-Item count is limited for free users and unlimited (or higher) for subscribers. See [User](../domain/user.md).
+Target behavior: item count is limited for free users and unlimited (or higher) for subscribers. See [User](../domain/user.md).
+
+Current limitation: subscription gating and item limits are not yet implemented. See [Current Limitations](./current-limitations.md#subscription-not-yet-implemented).
 
 - What is the specific item limit for free users?
 - Are there limits on outfits or collections?
@@ -40,7 +44,9 @@ How user data — especially photos — is handled. Affects trust, compliance, a
 
 ## Monetization
 
-The business model is freemium with a subscription that unlocks full functionality. See [User](../domain/user.md) for the subscription concept.
+Target business model: freemium with a subscription that unlocks full functionality. See [User](../domain/user.md) for the subscription concept.
+
+Current limitation: subscription gating and item limits are not yet implemented. See [Current Limitations](./current-limitations.md#subscription-not-yet-implemented).
 
 - Which specific features are gated behind the paywall?
 - Is there a trial period for the subscription?
