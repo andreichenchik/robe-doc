@@ -4,15 +4,15 @@ Allows users to find [Items](../domain/item.md) in their wardrobe by applying fi
 
 ## Purpose
 
-The wardrobe serves as a visual browser of everything the user owns. Its primary value is letting users quickly scan their items, get a visual overview, and spark ideas for new outfit combinations. Filtering narrows down the view by one or more dimensions, making it easy to answer questions like "what tops do I have?" or "which outerwear is available?".
+The wardrobe serves as a visual browser of everything the user owns. Its primary value is letting users quickly scan their items, get a visual overview, and spark ideas for new outfit combinations. Filtering narrows down the view by one or more dimensions, making it easy to answer questions like "what tops do I have?" or "which outwear is available?".
 
 ## Filter Dimensions
 
 | Dimension | Source |
 |-----------|--------|
 | [Category](../domain/category.md) | Derived from Type |
-| Type | AI-detected or manually assigned |
-| Color | AI-detected or manually assigned; from a predefined color set |
+| [Type](../domain/type.md) | AI-detected or manually assigned |
+| [Color](../domain/color.md) | AI-detected or manually assigned |
 | [Collections](../domain/collection.md) | User-assigned |
 
 > [!NOTE]

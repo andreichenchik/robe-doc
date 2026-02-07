@@ -17,11 +17,11 @@ Photo selection is the only decision point in the flow. Once the user confirms, 
 
 ## Processing Pipeline
 
-After confirmation, each item appears in the wardrobe right away with a visible [processing status](../domain/item.md#processing-status). The entire pipeline runs automatically without user intervention:
+After confirmation, each item appears in the wardrobe right away with a visible [processing status](../domain/item.md#processing-status). The pipeline runs automatically without user intervention:
 
-1. **Background removal** — [Background Removal](../features/background-removal.md) strips the background and produces a transparent cutout image.
-2. **Upload** — the processed photo is uploaded.
-3. **AI classification** — [AI Classification](../features/ai-classification.md) detects type, color, and brand, and suggests [Collections](../domain/collection.md). [Category](../domain/category.md) is derived from the detected type.
+1. **Background removal** — [Background Removal](../features/background-removal.md) processes the photo.
+2. **Upload** — the processed image is uploaded.
+3. **Classification** — [AI Classification](../features/ai-classification.md) runs and fills recognized attributes.
 
 When multiple photos are selected from the gallery, all items are processed in parallel.
 

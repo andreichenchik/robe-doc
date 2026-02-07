@@ -2,6 +2,8 @@
 
 The application follows a **local-first** approach: the device is the primary data source, and the app works offline by default.
 
+Current implementation status is tracked in [Current Limitations](./current-limitations.md#local-first-is-partial).
+
 ## Offline Behavior
 
 - All core functionality — browsing the wardrobe, viewing items, creating and editing outfits — is available without a network connection.

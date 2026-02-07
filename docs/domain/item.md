@@ -6,12 +6,13 @@ A piece in the user's digital wardrobe. Item is the central entity of the system
 
 - **Photo** — user-provided photo of the piece. Background is removed by [Background Removal](../features/background-removal.md).
 - **Name** — auto-generated from properties following the pattern "{color} {type} {brand}" (e.g. "Multicolor Skirt Chanel"). Updates automatically when properties change.
-- **Type** — specific kind of clothing or accessory (e.g. t-shirt, jeans, dress). Type comes from a predefined category-type hierarchy. See [Category](./category.md).
-- **Color** — dominant color of the piece. Selected from a predefined fixed set of colors.
-- **Brand** — brand of the piece. Selected from a predefined list; users can also add custom brands.
+- **Type** — specific kind of clothing or accessory (e.g. t-shirt, jeans, dress). Type comes from the predefined [Type](./type.md) catalog and determines [Category](./category.md).
+- **Color** — dominant color of the piece. Selected from the predefined [Color](./color.md) catalog.
+- **Brand** — brand of the piece. Selected from the predefined [Brand](./brand.md) catalog. Custom brand creation is target behavior and not yet implemented. See [Current Limitations](../constraints/current-limitations.md#custom-brands-not-yet-supported).
 - **Hidden** — when enabled, the item does not appear in the wardrobe or other views.
 - **Favorite** — marks the item as a favorite.
-- **Collections** — user-defined groupings for organization. See [Collection](./collection.md).
+- **Collections** — user-defined labels assigned to items. See [Collection](./collection.md).
+- **Processing status** — lifecycle state used while a newly added item is being processed. See [Processing Status](#processing-status).
 
 Some attributes are auto-detected by [AI Classification](../features/ai-classification.md) on creation. All attributes can be edited by the user.
 
@@ -19,7 +20,6 @@ Some attributes are auto-detected by [AI Classification](../features/ai-classifi
 > **Undefined — requires clarification:**
 > - How the processed (background-removed) image relates to the original photo — are both stored?
 > - Whether Item has a creation date, last-modified date, or other metadata.
-> - What happens when an Item is deleted but it belongs to one or more [Outfits](./outfit.md).
 
 ## Processing Status
 
@@ -42,8 +42,8 @@ The user can interact with other items and navigate the app while processing run
 ## Business Rules
 
 - An Item must have a photo.
+- Outfit-related constraints for Item usage and deletion are defined in [Outfit](./outfit.md#business-rules).
 
 > [!NOTE]
 > **Undefined — requires clarification:**
 > - Is there a limit on how many Collections an Item can have?
-> - Can an Item appear multiple times in the same Outfit?

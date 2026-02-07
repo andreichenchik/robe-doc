@@ -46,7 +46,7 @@ How user data — especially photos — is handled. Affects trust, compliance, a
 
 Target business model: freemium with a subscription that unlocks full functionality. See [User](../domain/user.md) for the subscription concept.
 
-Current limitation: subscription gating and item limits are not yet implemented. See [Current Limitations](./current-limitations.md#subscription-not-yet-implemented).
+Current implementation gap is the same as in [Storage & Limits](#storage-limits): subscription gating and item limits are not yet implemented. See [Current Limitations](./current-limitations.md#subscription-not-yet-implemented).
 
 - Which specific features are gated behind the paywall?
 - Is there a trial period for the subscription?

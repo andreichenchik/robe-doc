@@ -11,6 +11,9 @@
   - [Item](/domain/item.md)
   - [Outfit](/domain/outfit.md)
   - [Category](/domain/category.md)
+  - [Type](/domain/type.md)
+  - [Color](/domain/color.md)
+  - [Brand](/domain/brand.md)
   - [Collection](/domain/collection.md)
   - [User](/domain/user.md)
 
@@ -25,4 +28,5 @@
   - [Add Item](/flows/add-item.md)
   - [Edit Item](/flows/edit-item.md)
   - [Create Outfit](/flows/create-outfit.md)
+  - [Edit Outfit](/flows/edit-outfit.md)
   - [Onboarding](/flows/onboarding.md)

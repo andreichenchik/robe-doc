@@ -8,7 +8,7 @@ As limitations are resolved, remove them from this list.
 
 ## Custom Brands Not Yet Supported
 
-[Item](../domain/item.md) documentation describes brand as a predefined list with user-extensible custom brands. Currently, users can only select from the predefined brand list — adding custom brands is not yet implemented.
+[Brand](../domain/brand.md) documentation describes brand as a predefined list with user-extensible custom brands. Currently, users can only select from the predefined brand list — adding custom brands is not yet implemented.
 
 ---
 
@@ -45,3 +45,21 @@ As limitations are resolved, remove them from this list.
 ## Outfit Photo Gallery Not Yet Implemented
 
 [Outfit](../domain/outfit.md) supports multiple photos per outfit. Currently, only a single photo can be attached to an outfit.
+
+---
+
+## Create Outfit Entry Point Is Incomplete
+
+[Create Outfit](../flows/create-outfit.md) defines two entry points: the outfits tab and the wardrobe screen. Currently, create outfit is available only from the outfits tab.
+
+---
+
+## Collage Undo/Redo Not Yet Implemented
+
+[Outfit Collage](../features/outfit-collage.md) defines undo and redo actions in the collage editor. Currently, undo and redo are not available.
+
+---
+
+## Type ID Typo in Backend Catalog
+
+[Type](../domain/type.md) documentation defines the canonical bottom type as `leggings`. Currently, backend catalog still returns legacy key `leggins` for this type.
