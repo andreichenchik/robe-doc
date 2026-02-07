@@ -4,7 +4,7 @@ A specific garment or accessory classification used by [Item](./item.md). Each T
 
 ## Structure
 
-- Types are predefined by the system and are not user-customizable.
+- Type catalog governance is part of the predefined hierarchy described in [Category](./category.md#structure).
 - Each Type has:
   - `id` — stable system key.
   - `title` — user-facing label.
@@ -69,8 +69,7 @@ A specific garment or accessory classification used by [Item](./item.md). Each T
 
 ## Relationships
 
-- A [Category](./category.md) contains one or more Types.
-- A Type belongs to exactly one [Category](./category.md).
+- Category-to-Type hierarchy is defined in [Category](./category.md#relationships).
 - An [Item](./item.md) has exactly one Type.
 
 ## Business Rules

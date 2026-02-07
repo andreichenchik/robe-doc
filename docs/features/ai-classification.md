@@ -28,7 +28,7 @@ Reduce manual effort when adding items. Instead of filling in every field by han
 
 ## User Override
 
-All AI-detected attributes (type, color, brand, collections) can be reviewed and corrected by the user after classification completes.
+All AI-detected attributes ([Type](../domain/type.md), [Color](../domain/color.md), [Brand](../domain/brand.md), [Collections](../domain/collection.md)) can be reviewed and corrected by the user after classification completes.
 
 > [!NOTE]
 > **Undefined — requires clarification:**

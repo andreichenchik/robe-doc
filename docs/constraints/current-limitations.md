@@ -48,6 +48,18 @@ As limitations are resolved, remove them from this list.
 
 ---
 
+## Create Outfit Entry Point Is Incomplete
+
+[Create Outfit](../flows/create-outfit.md) defines two entry points: the outfits tab and the wardrobe screen. Currently, create outfit is available only from the outfits tab.
+
+---
+
+## Collage Undo/Redo Not Yet Implemented
+
+[Outfit Collage](../features/outfit-collage.md) defines undo and redo actions in the collage editor. Currently, undo and redo are not available.
+
+---
+
 ## Type ID Typo in Backend Catalog
 
 [Type](../domain/type.md) documentation defines the canonical bottom type as `leggings`. Currently, backend catalog still returns legacy key `leggins` for this type.

@@ -9,7 +9,7 @@ Let users visually combine clothing pieces into a look by dragging and positioni
 ## Viewing Modes
 
 - **Outfit screen** — displays the collage in read-only mode alongside outfit details.
-- **Collage editor** — accessed from the outfit screen. The user can add, remove, and arrange items (drag, scale, rotate).
+- **Collage editor** — accessed from the outfit screen in the [Edit Outfit](../flows/edit-outfit.md) flow. The user can add, remove, and arrange items (drag, scale, rotate).
 - **Outfit list** — each outfit is previewed by its collage image.
 
 ## Behavior
@@ -22,7 +22,10 @@ Let users visually combine clothing pieces into a look by dragging and positioni
 - The collage has a fixed 3.7:5 aspect ratio, consistent across the app.
 - Only items are allowed on the collage — no images, text, stickers, or other decorative elements.
 - The collage must contain at least one item (an empty collage is not possible).
-- Collage state is persisted on save.
+- Collage state is persisted only by explicit save in the collage editor.
+- Undo and redo actions are available in the collage editor.
+- Collage background is fixed white and cannot be customized.
+- A static image is generated automatically only when sharing from the outfit screen.
 
 > [!NOTE]
 > **Undefined — requires clarification:**
@@ -33,13 +36,5 @@ Let users visually combine clothing pieces into a look by dragging and positioni
 
 Item positions use the [normalized coordinate system](../domain/outfit.md#collage-data-model) defined in the Outfit data model.
 
-- Drag-and-drop is optimized for smooth operation.
-- Collage state is synchronized with the backend.
-
-> [!NOTE]
-> **Undefined — requires clarification:**
-> - Can the user undo/redo collage actions?
-> - Is the collage state auto-saved or explicitly saved by the user?
-> - Can the collage generate a static image (e.g. for sharing)?
-> - Maximum number of items on a single collage.
-> - Collage background — is it configurable or fixed?
+- Sync and offline behavior follow [Data & Sync](../constraints/data-sync.md).
+- Item count constraints are defined in the [Outfit](../domain/outfit.md#collage-data-model) data model.

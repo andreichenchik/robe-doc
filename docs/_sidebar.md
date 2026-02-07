@@ -28,4 +28,5 @@
   - [Add Item](/flows/add-item.md)
   - [Edit Item](/flows/edit-item.md)
   - [Create Outfit](/flows/create-outfit.md)
+  - [Edit Outfit](/flows/edit-outfit.md)
   - [Onboarding](/flows/onboarding.md)

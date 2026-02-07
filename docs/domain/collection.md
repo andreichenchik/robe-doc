@@ -18,13 +18,12 @@ Collections let users define their own cross-cutting labels (e.g. "sporty", "eve
 
 - A Collection can be attached to zero or more [Items](./item.md).
 - A Collection can be attached to zero or more [Outfits](./outfit.md).
-- The same set of Collections is shared across Items and Outfits.
+- The same set of Collections is shared across [Items](./item.md) and [Outfits](./outfit.md).
 - Collections are used as a filter dimension in [Wardrobe Filtering](../features/wardrobe-filtering.md).
 
 ## Business Rules
 
 - Collections are created by the user. During item classification, [AI Classification](../features/ai-classification.md) can suggest assigning existing collections to a new item, but it does not create new collections.
-- An Item or Outfit can belong to zero or more Collections.
 
 > [!NOTE]
 > **Undefined — requires clarification:**

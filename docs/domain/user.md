@@ -20,5 +20,5 @@ The app stores no user metadata — no registration date, last login, display na
 ## Business Rules
 
 - A User must be authenticated via Apple ID to use the app. There is no guest or anonymous usage.
-- When a User deletes their account, all associated data is removed — items, outfits, collections, and the user record. Deletion is immediate after the user confirms the action in [Profile](../features/profile.md). See [Current Limitations](../constraints/current-limitations.md) for known gaps in the deletion process.
+- When a User deletes their account, all associated data is removed — [Items](./item.md), [Outfits](./outfit.md), [Collections](./collection.md), and the user record. Deletion is immediate after the user confirms the action in [Profile](../features/profile.md). See [Current Limitations](../constraints/current-limitations.md) for known gaps in the deletion process.
 - After deletion, the user can re-register with the same Apple ID. This creates a new, empty account with no connection to the previous one.

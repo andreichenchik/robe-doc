@@ -8,16 +8,16 @@ User taps an item in the wardrobe to open the item editing screen.
 
 ## Editable Properties
 
-All [Item](../domain/item.md) properties can be modified:
+The user can edit mutable [Item](../domain/item.md#properties) attributes:
 
-- **Type** — select from the predefined [Type](../domain/type.md) catalog. Changing the type also changes the derived [Category](../domain/category.md).
-- **Color** — select from the predefined [Color](../domain/color.md) catalog.
-- **Brand** — select from the predefined [Brand](../domain/brand.md) catalog or add a custom brand.
+- **Type** ([Type](../domain/type.md))
+- **Color** ([Color](../domain/color.md))
+- **Brand** ([Brand](../domain/brand.md))
 - **Hidden** — toggle whether the item appears in the wardrobe.
 - **Favorite** — toggle favorite status.
 - **Collections** — add or remove [Collections](../domain/collection.md).
 
-The item **Name** auto-updates when type, color, or brand changes.
+Name behavior follows [Item](../domain/item.md#properties): it auto-updates when type, color, or brand changes.
 
 ## Photo Replacement
 

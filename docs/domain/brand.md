@@ -1,6 +1,6 @@
 # Brand
 
-Brand of a clothing piece on [Item](./item.md). Brands are used as attribute values for item naming and AI classification output.
+Brand of a clothing piece on [Item](./item.md). Brands are used as attribute values for item naming and [AI Classification](../features/ai-classification.md) output.
 
 ## Structure
 

@@ -1,6 +1,6 @@
 # Color
 
-Dominant color attribute of an [Item](./item.md). Colors are used in auto-generated names, filtering, and AI classification output.
+Dominant color attribute of an [Item](./item.md). Colors are used in auto-generated names, filtering, and [AI Classification](../features/ai-classification.md) output.
 
 ## Structure
 
