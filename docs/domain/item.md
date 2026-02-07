@@ -8,7 +8,7 @@ A piece in the user's digital wardrobe. Item is the central entity of the system
 - **Name** — auto-generated from properties following the pattern "{color} {type} {brand}" (e.g. "Multicolor Skirt Chanel"). Updates automatically when properties change.
 - **Type** — specific kind of clothing or accessory (e.g. t-shirt, jeans, dress). Type comes from the predefined [Type](./type.md) catalog and determines [Category](./category.md).
 - **Color** — dominant color of the piece. Selected from the predefined [Color](./color.md) catalog.
-- **Brand** — brand of the piece. Selected from the predefined [Brand](./brand.md) catalog; users can also add custom brands.
+- **Brand** — brand of the piece. Selected from the predefined [Brand](./brand.md) catalog. Custom brand creation is target behavior and not yet implemented. See [Current Limitations](../constraints/current-limitations.md#custom-brands-not-yet-supported).
 - **Hidden** — when enabled, the item does not appear in the wardrobe or other views.
 - **Favorite** — marks the item as a favorite.
 - **Collections** — user-defined labels assigned to items. See [Collection](./collection.md).

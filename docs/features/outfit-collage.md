@@ -9,7 +9,7 @@ Let users visually combine clothing pieces into a look by dragging and positioni
 ## Viewing Modes
 
 - **Outfit screen** — displays the collage in read-only mode alongside outfit details.
-- **Collage editor** — accessed from the outfit screen in the [Edit Outfit](../flows/edit-outfit.md) flow. The user can add, remove, and arrange items (drag, scale, rotate).
+- **Collage editor** — accessed from the outfit screen in the [Create Outfit](../flows/create-outfit.md) and [Edit Outfit](../flows/edit-outfit.md) flows. The user can add, remove, and arrange items (drag, scale, rotate).
 - **Outfit list** — each outfit is previewed by its collage image.
 
 ## Behavior
