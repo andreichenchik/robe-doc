@@ -10,9 +10,9 @@ User taps an item in the wardrobe to open the item editing screen.
 
 All [Item](../domain/item.md) properties can be modified:
 
-- **Type** — select from the predefined category-type hierarchy. Changing the type also changes the derived [Category](../domain/category.md).
-- **Color** — select from the predefined color set.
-- **Brand** — select from the predefined brand list or add a custom brand.
+- **Type** — select from the predefined [Type](../domain/type.md) catalog. Changing the type also changes the derived [Category](../domain/category.md).
+- **Color** — select from the predefined [Color](../domain/color.md) catalog.
+- **Brand** — select from the predefined [Brand](../domain/brand.md) catalog or add a custom brand.
 - **Hidden** — toggle whether the item appears in the wardrobe.
 - **Favorite** — toggle favorite status.
 - **Collections** — add or remove [Collections](../domain/collection.md).

@@ -11,6 +11,9 @@
   - [Item](/domain/item.md)
   - [Outfit](/domain/outfit.md)
   - [Category](/domain/category.md)
+  - [Type](/domain/type.md)
+  - [Color](/domain/color.md)
+  - [Brand](/domain/brand.md)
   - [Collection](/domain/collection.md)
   - [User](/domain/user.md)
 

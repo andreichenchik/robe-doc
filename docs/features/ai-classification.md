@@ -10,20 +10,21 @@ Reduce manual effort when adding items. Instead of filling in every field by han
 
 ### Clothing Classification
 
-- Detects **type** of garment (e.g. t-shirt, jeans, dress). [Category](../domain/category.md) is derived from the detected type.
+- Detects **type** of garment (e.g. t-shirt, jeans, dress) from the predefined [Type](../domain/type.md) catalog. [Category](../domain/category.md) is derived from the detected type.
 
 ### Color Detection
 
-- Identifies the dominant color of the garment from the predefined color set.
+- Identifies the dominant color of the garment from the predefined [Color](../domain/color.md) catalog.
 
 ### Brand Detection
 
-- Attempts to match the brand from the user's existing brand list.
+- Attempts to match the brand from the predefined [Brand](../domain/brand.md) catalog.
 - Least accurate classifier — brand is difficult to determine from a photo alone.
 
 ### Collection Suggestion
 
-- Suggests existing user [Collections](../domain/collection.md) that the item may belong to.
+- Suggests existing user [Collections](../domain/collection.md) that the item may belong to. This is target behavior and is not yet implemented. See [Current Limitations](../constraints/current-limitations.md#ai-collection-suggestion-not-yet-implemented).
+- AI does not detect additional style attributes such as material, pattern, season, or style tags.
 
 ## User Override
 
@@ -31,7 +32,6 @@ All AI-detected attributes (type, color, brand, collections) can be reviewed and
 
 > [!NOTE]
 > **Undefined — requires clarification:**
-> - What attributes beyond type, color, and brand does the AI detect (material, pattern, season, style)?
 > - What happens when AI classification fails or returns low confidence?
 
 ## Error Handling

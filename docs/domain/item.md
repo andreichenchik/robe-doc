@@ -6,9 +6,9 @@ A piece in the user's digital wardrobe. Item is the central entity of the system
 
 - **Photo** — user-provided photo of the piece. Background is removed by [Background Removal](../features/background-removal.md).
 - **Name** — auto-generated from properties following the pattern "{color} {type} {brand}" (e.g. "Multicolor Skirt Chanel"). Updates automatically when properties change.
-- **Type** — specific kind of clothing or accessory (e.g. t-shirt, jeans, dress). Type comes from a predefined category-type hierarchy. See [Category](./category.md).
-- **Color** — dominant color of the piece. Selected from a predefined fixed set of colors.
-- **Brand** — brand of the piece. Selected from a predefined list; users can also add custom brands.
+- **Type** — specific kind of clothing or accessory (e.g. t-shirt, jeans, dress). Type comes from the predefined [Type](./type.md) catalog and determines [Category](./category.md).
+- **Color** — dominant color of the piece. Selected from the predefined [Color](./color.md) catalog.
+- **Brand** — brand of the piece. Selected from the predefined [Brand](./brand.md) catalog; users can also add custom brands.
 - **Hidden** — when enabled, the item does not appear in the wardrobe or other views.
 - **Favorite** — marks the item as a favorite.
 - **Collections** — user-defined groupings for organization. See [Collection](./collection.md).

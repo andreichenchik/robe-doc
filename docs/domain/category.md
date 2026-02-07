@@ -1,29 +1,36 @@
 # Category
 
-A high-level classification of wardrobe items. Categories group [Items](./item.md) into broad types (e.g. tops, bottoms, shoes, accessories).
+A high-level classification of wardrobe items. Categories group [Items](./item.md) into broad groups such as tops, bottoms, footwear, accessories, and outwear.
 
 ## Structure
 
-Categories form a two-level hierarchy: each Category contains one or more Types. For example, the Category "Tops" might contain Types like "T-shirt", "Blouse", and "Sweater".
+Categories form a two-level hierarchy with [Type](./type.md). Each Category contains one or more Types.
 
-- Categories and Types are predefined (system-level) and not user-customizable.
-- An [Item](./item.md) is assigned a Type, and its Category is derived from that Type. Items do not have a direct Category property.
-- [AI Classification](../features/ai-classification.md) detects the Type from a photo; Category follows automatically.
+- Categories and Types are predefined by the system and are not user-customizable.
+- An [Item](./item.md) is assigned a [Type](./type.md), and its Category is derived from that Type.
+- [AI Classification](../features/ai-classification.md) detects Type from a photo; Category follows automatically.
 
-> [!NOTE]
-> **Undefined — requires clarification:**
-> - Full list of categories and their types.
+## System Category Catalog
+
+| Category ID | Category Title |
+|-------------|----------------|
+| `top` | Tops |
+| `bottom` | Bottoms |
+| `footwear` | Footwear |
+| `accessory` | Accessories |
+| `outwear` | Outwear |
 
 ## Relationships
 
-- A Category contains one or more Types.
-- A Type belongs to exactly one Category.
-- An [Item](./item.md) has a Type, which determines its Category.
+- A Category contains one or more [Types](./type.md).
+- A [Type](./type.md) belongs to exactly one Category.
+- An [Item](./item.md) has a [Type](./type.md), which determines its Category.
 - Categories are used as a filter dimension in [Wardrobe Filtering](../features/wardrobe-filtering.md).
 
 ## Business Rules
 
-- Categories and Types are predefined by the system. Users cannot create, rename, or remove them.
+- Categories are predefined by the system. Users cannot create, rename, or remove them.
+- Category IDs in this catalog are stable and used as system keys.
 
 > [!NOTE]
 > **Undefined — requires clarification:**
