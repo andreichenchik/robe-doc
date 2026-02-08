@@ -173,7 +173,7 @@ def restore_docs_iframe_sources(touched: list[Path], old: str, new: str) -> None
 
 
 def run_docsify(root: Path, docs_port: int) -> int:
-    cmd = ["npx", "docsify", "serve", "./docs", "--port", str(docs_port)]
+    cmd = ["npx", "docsify-cli", "serve", "./docs", "--port", str(docs_port)]
     try:
         return subprocess.call(cmd, cwd=root)
     except KeyboardInterrupt:
