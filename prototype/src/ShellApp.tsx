@@ -3,7 +3,12 @@ import { prototypeList, prototypeMap } from "./prototypes/registry";
 import styles from "./ShellApp.module.css";
 
 function normalizeHash(hash: string): string {
-  return decodeURIComponent(hash.replace(/^#/, "").trim());
+  const value = hash.replace(/^#/, "").trim();
+  try {
+    return decodeURIComponent(value);
+  } catch {
+    return value;
+  }
 }
 
 function useHashSlug(): string {
@@ -61,19 +66,12 @@ function PrototypeHub() {
 
 function UnknownPrototype({
   slug,
-  showBackToHub,
 }: {
   slug: string;
-  showBackToHub: boolean;
 }) {
   return (
     <div className={styles.shellBg}>
       <main className={`${styles.container} ${styles.shellGrid}`}>
-        {showBackToHub ? (
-          <div className={styles.topActions}>
-            <BackToHubLink />
-          </div>
-        ) : null}
         <header className={`ds-card ${styles.screenHeader}`}>
           <div>
             <p className="ds-label">Prototype</p>
@@ -101,7 +99,7 @@ export default function ShellApp() {
   }
 
   if (!selectedPrototype) {
-    return <UnknownPrototype slug={slug} showBackToHub={showBackToHub} />;
+    return <UnknownPrototype slug={slug} />;
   }
 
   const ScreenComponent = selectedPrototype.component;
