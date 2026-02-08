@@ -1,5 +1,6 @@
 import type { ComponentType } from "react";
 import { SandboxPrototype } from "./sandbox";
+import { WardrobeFilteringPrototype } from "./wardrobe-filtering";
 
 export type PrototypeDefinition = {
   slug: string;
@@ -9,6 +10,12 @@ export type PrototypeDefinition = {
 };
 
 export const prototypeList: PrototypeDefinition[] = [
+  {
+    slug: "wardrobe-filtering",
+    title: "Wardrobe Filtering",
+    description: "Three-level wardrobe filter interaction with collection context and swipe tabs.",
+    component: WardrobeFilteringPrototype,
+  },
   {
     slug: "sandbox",
     title: "Sandbox",

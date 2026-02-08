@@ -6,31 +6,58 @@ Allows users to find [Items](../domain/item.md) in their wardrobe by applying fi
 
 The wardrobe serves as a visual browser of everything the user owns. Its primary value is letting users quickly scan their items, get a visual overview, and spark ideas for new outfit combinations. Filtering narrows down the view by one or more dimensions, making it easy to answer questions like "what tops do I have?" or "which outwear is available?".
 
-## Filter Dimensions
+## Information Architecture
 
-| Dimension | Source |
-|-----------|--------|
-| [Category](../domain/category.md) | Derived from Type |
-| [Type](../domain/type.md) | AI-detected or manually assigned |
-| [Color](../domain/color.md) | AI-detected or manually assigned |
-| [Collections](../domain/collection.md) | User-assigned |
+Wardrobe filtering is a three-level interaction model:
 
-Rules:
+1. **Level 1 — Collection context**
+   - User selects one [Collection](../domain/collection.md) or `All`.
+   - `All` means "show items from every collection context".
+   - Switching collection resets lower levels to their default state.
 
-- Free-text search is not supported.
-- Users can select multiple values in each filter dimension.
-- Values within the same filter dimension are OR-combined.
+2. **Level 2 — Category tabs**
+   - Category tabs are swipeable.
+   - The first tab is `All`, followed by system categories.
+   - The tab row shows only categories that currently have at least one item in the selected collection context.
+   - Changing collection resets the active category tab to `All`.
+
+3. **Level 3 — Detail filters**
+   - Detail filters are shown as circular icon buttons: [Type](../domain/type.md), [Color](../domain/color.md), and [Brand](../domain/brand.md).
+   - Multiple detail filters can be active at the same time.
+   - Activating a detail filter expands its tag panel.
+   - While active, the icon changes to a close action (`x`).
+   - Tapping the close action clears that filter and collapses its panel.
+   - Available tags are limited to values present in the current upper context (selected collection + selected category tab).
+   - Long tag lists are scrollable inside the expanded filter panel.
+
+## Filter Logic
+
+- Free-text search is not supported in v1.
+- Results update immediately after each selection change.
+- Multiple selected tags within one detail filter are OR-combined.
 - Different filter dimensions are AND-combined.
 - Results are ordered by date added, newest first.
-
-> [!NOTE]
-> **Undefined — requires clarification:**
-> - UI layout — is it a filter bar, bottom sheet, or dedicated screen?
 
 ## Behavior
 
 Users select filter values and the wardrobe view updates to show only matching items.
 
+- If at least one detail filter has selected tags, only items that match the full filter expression are shown.
 - If no items match, the list area shows an empty-state message indicating that no matching items were found.
 - The same filter logic and empty-state text are used when filtering items within [Collections](../domain/collection.md).
-- Filter state is not persisted across app restarts. It may remain during the current app session and resets when the app relaunches.
+- Filter state is stored per category tab during the current collection session.
+- Switching category tabs in the same collection restores each tab's own filter state.
+- Switching collection fully resets category-tab and detail-filter state.
+- Filter state is not persisted across app restarts.
+
+## Prototype
+
+<iframe
+  title="Wardrobe Filtering Prototype"
+  src="./_media/prototype.html#wardrobe-filtering"
+  width="390"
+  height="844"
+  scrolling="no"
+  loading="lazy"
+  style="width: 100%; max-width: 390px; border: 0; display: block; overflow: hidden;"
+></iframe>
