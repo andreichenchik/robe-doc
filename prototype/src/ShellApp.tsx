@@ -108,7 +108,7 @@ export default function ShellApp() {
 
   return (
     <div className={styles.shellBg}>
-      <main className={styles.container}>
+      <main className={`${styles.container} ${styles.shellGrid}`}>
         {showBackToHub ? (
           <div className={styles.topActions}>
             <BackToHubLink />
