@@ -1,11 +1,11 @@
-name: Check Links
+name: Pre-Commit Checks
 
 on:
   push:
 
 jobs:
-  check-links:
+  pre-commit-checks:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: ./scripts/check-links.py
+      - run: ./scripts/pre-commit-check.py
