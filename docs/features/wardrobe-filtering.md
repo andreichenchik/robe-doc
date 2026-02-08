@@ -31,6 +31,6 @@ Rules:
 
 Users select filter values and the wardrobe view updates to show only matching items.
 
-- If no items match, the list area shows the message `Nothing found`.
+- If no items match, the list area shows an empty-state message indicating that no matching items were found.
 - The same filter logic and empty-state text are used when filtering items within [Collections](../domain/collection.md).
 - Filter state is not persisted across app restarts. It may remain during the current app session and resets when the app relaunches.
