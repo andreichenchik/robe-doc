@@ -31,6 +31,6 @@ Rules:
 
 Users select filter values and the wardrobe view updates to show only matching items.
 
-- If no items match, the list area shows the text `Ничего не найдено`.
+- If no items match, the list area shows the empty-state text `Nothing found` (localized for supported languages).
 - The same filter logic and empty-state text are used when filtering items within [Collections](../domain/collection.md).
-- Filter state is not intentionally persisted. It can remain while the app instance stays alive, and resets after the app restarts.
+- Filter state is not persisted across app restarts. It may remain during the current app session and resets when the app relaunches.
