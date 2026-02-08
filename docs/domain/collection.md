@@ -7,12 +7,7 @@ Collections let users define their own cross-cutting labels (e.g. "sporty", "eve
 ## Properties
 
 - **Name** — the label text displayed on the collection.
-
-> [!NOTE]
-> **Undefined — requires clarification:**
-> - Does a Collection have a color or icon?
-> - Are Collection names unique per user?
-> - Is there a maximum length for Collection names?
+- Collections have no additional visual attributes such as icon or color.
 
 ## Relationships
 
@@ -24,8 +19,12 @@ Collections let users define their own cross-cutting labels (e.g. "sporty", "eve
 ## Business Rules
 
 - Collections are created by the user. During item classification, [AI Classification](../features/ai-classification.md) can suggest assigning existing collections to a new item, but it does not create new collections.
-
-> [!NOTE]
-> **Undefined — requires clarification:**
-> - What happens to a collection when all items and outfits using it are removed from it?
-> - Is there a limit on collections per item/outfit or total collections per user?
+- Collections are created empty and may remain empty.
+- Collection names must be unique per user.
+- Name uniqueness is evaluated case-insensitively and ignores leading/trailing whitespace (for example, `Summer` and ` summer ` are treated as the same name).
+- There is no maximum name length at the product level.
+- Collections can be deleted at any time.
+- Deleting a collection removes only the collection and its assignments. [Items](./item.md) and [Outfits](./outfit.md) are not changed or deleted.
+- There is no limit on the total number of collections per user.
+- There is no limit on how many collections can be assigned to an [Item](./item.md) or [Outfit](./outfit.md).
+- There is no limit on how many [Items](./item.md) or [Outfits](./outfit.md) can be assigned to a collection.
