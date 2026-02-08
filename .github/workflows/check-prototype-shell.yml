@@ -1,0 +1,16 @@
+name: Check Prototype Shell
+
+on:
+  push:
+
+jobs:
+  check-prototype-shell:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install --frozen-lockfile
+        working-directory: prototype
+      - run: bun run build:shell
+        working-directory: prototype
+      - run: git diff --exit-code -- docs/_media/prototype.html

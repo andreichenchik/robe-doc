@@ -1,0 +1,96 @@
+.shellBg {
+  min-height: 100vh;
+  padding: var(--space-6) var(--space-4);
+  background:
+    radial-gradient(circle at 5% 0%, #e6f2ff 0%, rgba(230, 242, 255, 0) 42%),
+    radial-gradient(circle at 95% 0%, #e9f8f2 0%, rgba(233, 248, 242, 0) 46%),
+    linear-gradient(180deg, #f8fbff 0%, #f2f8ff 100%);
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.shellGrid {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.heroCard,
+.screenHeader,
+.screenOnlyCard {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface-soft);
+  box-shadow: var(--shadow-soft);
+}
+
+.heroCard {
+  display: grid;
+  gap: var(--space-3);
+  padding: var(--space-5);
+}
+
+.heroCard h1,
+.screenHeader h1 {
+  margin: 0;
+  font-size: clamp(24px, 3vw, 32px);
+  line-height: 1.1;
+}
+
+.heroCard p,
+.screenHeader p {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-3);
+}
+
+.prototypeCard {
+  display: grid;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.prototypeCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(13, 31, 51, 0.1);
+}
+
+.prototypeCard h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.prototypeCard p {
+  margin: 0;
+  color: var(--color-text-muted-2);
+}
+
+.linkPill {
+  margin-top: 2px;
+}
+
+.screenHeader {
+  display: grid;
+  gap: var(--space-3);
+  padding: var(--space-5);
+}
+
+.screenOnlyCard {
+  padding: var(--space-5);
+}
+
+@media (max-width: 640px) {
+  .shellBg {
+    padding: var(--space-4) var(--space-2);
+  }
+}

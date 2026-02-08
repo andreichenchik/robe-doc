@@ -8,4 +8,14 @@ script = ""
 [[actions]]
 name = "Run"
 icon = "run"
-command = "npx docsify serve ./docs"
+command = "python3 ./scripts/dev-docs-prototype.py"
+
+[[actions]]
+name = "Build Prototype Shell"
+icon = "run"
+command = "bun run --cwd prototype build:shell"
+
+[[actions]]
+name = "Watch Prototype Shell"
+icon = "run"
+command = "bun run --cwd prototype build:shell:watch"

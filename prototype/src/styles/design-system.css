@@ -1,0 +1,61 @@
+.ds-card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+}
+
+.ds-badge {
+  width: fit-content;
+  padding: var(--space-1) 10px;
+  border-radius: var(--radius-pill);
+  background: var(--color-surface-accent-2);
+  color: #1f4f82;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.ds-code {
+  width: fit-content;
+  padding: 6px 10px;
+  border: 1px solid #cfe0f2;
+  border-radius: var(--radius-sm);
+  background: #f4f9ff;
+  color: #1f4974;
+  font-size: 12px;
+}
+
+.ds-label {
+  margin: 0;
+  color: #2c5680;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.ds-pill {
+  width: fit-content;
+  padding: var(--space-1) 10px;
+  border-radius: var(--radius-pill);
+  background: var(--color-surface-accent);
+  color: var(--color-text-accent);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.ds-button {
+  appearance: none;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  background: linear-gradient(180deg, #ffffff 0%, #eff6ff 100%);
+  color: #1d4d7f;
+  font-weight: 600;
+  padding: var(--space-2) var(--space-3);
+  cursor: pointer;
+}
+
+.ds-button:hover {
+  border-color: #7f9fbe;
+}
