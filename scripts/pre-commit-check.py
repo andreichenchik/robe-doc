@@ -2,6 +2,7 @@
 """Run repository pre-commit checks.
 
 Checks:
+- Auto-rebuilds prototype shell when `prototype/**` changed locally.
 - Internal markdown links are valid (file + optional #anchor).
 - Docs embeds do not commit localhost prototype iframe sources.
 
@@ -12,6 +13,7 @@ Usage:
 from __future__ import annotations
 
 import re
+import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -36,6 +38,63 @@ def repo_root() -> Path:
         check=True,
     )
     return Path(result.stdout.strip())
+
+
+def run_lines(root: Path, command: list[str]) -> list[str]:
+    result = subprocess.run(
+        command,
+        cwd=root,
+        capture_output=True,
+        text=True,
+    )
+    if result.returncode != 0:
+        return []
+    return [line.strip() for line in result.stdout.splitlines() if line.strip()]
+
+
+def should_rebuild_for_path(path: str) -> bool:
+    if not path.startswith("prototype/"):
+        return False
+    return Path(path).suffix.lower() != ".md"
+
+
+def has_prototype_source_changes(root: Path) -> bool:
+    staged = run_lines(root, ["git", "diff", "--name-only", "--cached", "--", "prototype"])
+    unstaged = run_lines(root, ["git", "diff", "--name-only", "--", "prototype"])
+    untracked = run_lines(
+        root,
+        ["git", "ls-files", "--others", "--exclude-standard", "--", "prototype"],
+    )
+    changed_paths = set(staged + unstaged + untracked)
+    return any(should_rebuild_for_path(path) for path in changed_paths)
+
+
+def rebuild_prototype_shell(root: Path) -> str | None:
+    if shutil.which("bun") is None:
+        return "bun is required to rebuild prototype shell, but it is not installed."
+
+    print(
+        "Prototype changes detected: rebuilding docs/_media/prototype.html ...",
+        flush=True,
+    )
+    build = subprocess.run(
+        ["bun", "run", "--cwd", "prototype", "build:shell"],
+        cwd=root,
+        text=True,
+    )
+    if build.returncode != 0:
+        return "prototype shell build failed."
+
+    stage = subprocess.run(
+        ["git", "add", "docs/_media/prototype.html"],
+        cwd=root,
+        text=True,
+    )
+    if stage.returncode != 0:
+        return "failed to stage docs/_media/prototype.html after build."
+
+    print("Prototype shell rebuilt and staged.")
+    return None
 
 
 def find_md_files(root: Path) -> list[Path]:
@@ -185,6 +244,13 @@ def print_section(title: str, items: list[str]) -> None:
 
 def main() -> int:
     root = repo_root()
+
+    if has_prototype_source_changes(root):
+        build_error = rebuild_prototype_shell(root)
+        if build_error:
+            print("Pre-commit checks failed.")
+            print(f"\nPrototype shell rebuild error: {build_error}")
+            return 1
 
     link_errors = validate_internal_links(root)
     iframe_errors = validate_iframe_prototype_sources(root)

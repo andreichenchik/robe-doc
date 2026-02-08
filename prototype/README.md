@@ -51,6 +51,7 @@ If this file is embedded in docs via `iframe`, refresh the docs page (or the ifr
 - `build:shell:watch` updates the generated file on disk continuously.
 - Docs `iframe` using `./_media/prototype.html#<slug>` does not always hot-reload automatically.
 - `python3 ./scripts/dev-docs-prototype.py` temporarily rewrites iframe sources to the live Vite URL and reverts them on exit.
+- `./scripts/pre-commit-check.py` auto-rebuilds and stages `docs/_media/prototype.html` when `prototype/**` changes are present.
 - `./scripts/pre-commit-check.py` fails if a committed docs iframe points to localhost for `prototype.html`.
 
 ## Hash Routing

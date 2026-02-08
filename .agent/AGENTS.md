@@ -140,8 +140,8 @@ Before committing, verify that all related parts of the documentation are consis
 - `_sidebar.md` reflects any added, removed, or renamed pages.
 - `.agent/AGENTS.md` documentation structure tree is up to date.
 - Run `./scripts/pre-commit-check.py` (validates markdown links and forbids localhost prototype iframe URLs).
+- `./scripts/pre-commit-check.py` auto-rebuilds and stages `docs/_media/prototype.html` when `prototype/**` changes are detected.
 - Existing docs that reference the changed concept are updated if needed.
-- If `prototype/**` changed, run `bun run --cwd prototype build:shell` and include updated `docs/_media/prototype.html`.
 - Do not hand-edit `docs/_media/prototype.html`; regenerate it from `prototype/` only.
 
 ## Pull Request Merge
