@@ -17,6 +17,15 @@
   gap: var(--space-4);
 }
 
+.topActions {
+  display: flex;
+}
+
+.backToHub {
+  width: fit-content;
+  text-decoration: none;
+}
+
 .heroCard,
 .screenHeader,
 .screenOnlyCard {

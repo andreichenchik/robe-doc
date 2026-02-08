@@ -18,6 +18,22 @@ function useHashSlug(): string {
   return slug;
 }
 
+function isTopLevelWindow(): boolean {
+  try {
+    return window.self === window.top;
+  } catch {
+    return false;
+  }
+}
+
+function BackToHubLink() {
+  return (
+    <a className={`ds-button ${styles.backToHub}`} href="#">
+      Back to Prototype Hub
+    </a>
+  );
+}
+
 function PrototypeHub() {
   return (
     <div className={styles.shellBg}>
@@ -43,10 +59,21 @@ function PrototypeHub() {
   );
 }
 
-function UnknownPrototype({ slug }: { slug: string }) {
+function UnknownPrototype({
+  slug,
+  showBackToHub,
+}: {
+  slug: string;
+  showBackToHub: boolean;
+}) {
   return (
     <div className={styles.shellBg}>
       <main className={`${styles.container} ${styles.shellGrid}`}>
+        {showBackToHub ? (
+          <div className={styles.topActions}>
+            <BackToHubLink />
+          </div>
+        ) : null}
         <header className={`ds-card ${styles.screenHeader}`}>
           <div>
             <p className="ds-label">Prototype</p>
@@ -63,6 +90,7 @@ function UnknownPrototype({ slug }: { slug: string }) {
 
 export default function ShellApp() {
   const slug = useHashSlug();
+  const showBackToHub = isTopLevelWindow();
   const selectedPrototype = useMemo(
     () => (slug ? prototypeMap.get(slug) : null),
     [slug],
@@ -73,7 +101,7 @@ export default function ShellApp() {
   }
 
   if (!selectedPrototype) {
-    return <UnknownPrototype slug={slug} />;
+    return <UnknownPrototype slug={slug} showBackToHub={showBackToHub} />;
   }
 
   const ScreenComponent = selectedPrototype.component;
@@ -81,6 +109,11 @@ export default function ShellApp() {
   return (
     <div className={styles.shellBg}>
       <main className={styles.container}>
+        {showBackToHub ? (
+          <div className={styles.topActions}>
+            <BackToHubLink />
+          </div>
+        ) : null}
         <section className={`ds-card ${styles.screenOnlyCard}`}>
           <ScreenComponent />
         </section>
