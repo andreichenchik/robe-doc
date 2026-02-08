@@ -43,7 +43,4 @@ The user can interact with other items and navigate the app while processing run
 
 - An Item must have a photo.
 - Outfit-related constraints for Item usage and deletion are defined in [Outfit](./outfit.md#business-rules).
-
-> [!NOTE]
-> **Undefined — requires clarification:**
-> - Is there a limit on how many Collections an Item can have?
+- There is no limit on how many [Collections](./collection.md) can be assigned to an Item.

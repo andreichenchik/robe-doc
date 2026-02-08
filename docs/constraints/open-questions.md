@@ -27,7 +27,7 @@ Target behavior: item count is limited for free users and unlimited (or higher) 
 Current limitation: subscription gating and item limits are not yet implemented. See [Current Limitations](./current-limitations.md#subscription-not-yet-implemented).
 
 - What is the specific item limit for free users?
-- Are there limits on outfits or collections?
+- Are there limits on outfits?
 - Photo storage limits (size, resolution, count).
 
 ---

@@ -1,6 +1,6 @@
 # Wardrobe Filtering
 
-Allows users to find [Items](../domain/item.md) in their wardrobe by applying filters and search criteria.
+Allows users to find [Items](../domain/item.md) in their wardrobe by applying filters.
 
 ## Purpose
 
@@ -15,20 +15,22 @@ The wardrobe serves as a visual browser of everything the user owns. Its primary
 | [Color](../domain/color.md) | AI-detected or manually assigned |
 | [Collections](../domain/collection.md) | User-assigned |
 
+Rules:
+
+- Free-text search is not supported.
+- Users can select multiple values in each filter dimension.
+- Values within the same filter dimension are OR-combined.
+- Different filter dimensions are AND-combined.
+- Results are ordered by date added, newest first.
+
 > [!NOTE]
 > **Undefined — requires clarification:**
-> - Is there a free-text search (by item name, notes, etc.)?
-> - Can multiple filter values be combined (e.g. Category = Tops AND Color = Blue)?
-> - Are filters AND-combined or OR-combined within the same dimension?
-> - Is there a sort order (by date added, name, color)?
 > - UI layout — is it a filter bar, bottom sheet, or dedicated screen?
 
 ## Behavior
 
 Users select filter values and the wardrobe view updates to show only matching items.
 
-> [!NOTE]
-> **Undefined — requires clarification:**
-> - Is filtering performed locally or server-side?
-> - Are filter selections persisted between sessions?
-> - What is shown when no items match the filters?
+- If no items match, the list area shows the text `Ничего не найдено`.
+- The same filter logic and empty-state text are used when filtering items within [Collections](../domain/collection.md).
+- Filter state is not intentionally persisted. It can remain while the app instance stays alive, and resets after the app restarts.
