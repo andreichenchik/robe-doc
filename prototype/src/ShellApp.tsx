@@ -103,15 +103,16 @@ export default function ShellApp() {
   }
 
   const ScreenComponent = selectedPrototype.component;
+  if (!showBackToHub) {
+    return <ScreenComponent />;
+  }
 
   return (
     <div className={styles.shellBg}>
       <main className={`${styles.container} ${styles.shellGrid}`}>
-        {showBackToHub ? (
-          <div className={styles.topActions}>
-            <BackToHubLink />
-          </div>
-        ) : null}
+        <div className={styles.topActions}>
+          <BackToHubLink />
+        </div>
         <section className={`ds-card ${styles.screenOnlyCard}`}>
           <ScreenComponent />
         </section>

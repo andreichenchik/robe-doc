@@ -32,6 +32,7 @@ Brand of a clothing piece on [Item](./item.md). Brands are used as attribute val
 
 - An [Item](./item.md) has one Brand value.
 - [AI Classification](../features/ai-classification.md) attempts to detect Brand from photo input.
+- Brand is used as a filter dimension in [Wardrobe Filtering](../features/wardrobe-filtering.md).
 
 ## Business Rules
 

@@ -1,0 +1,436 @@
+.root {
+  display: flex;
+  justify-content: center;
+  min-width: 0;
+}
+
+.phoneFrame {
+  --filter-chip-height: 26px;
+  --radius-level-1: 10px;
+  --radius-level-2: 14px;
+  --radius-level-3: 999px;
+  width: 100%;
+  max-width: 390px;
+  height: 760px;
+  min-height: 760px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: 10px;
+  border: 1px solid #d3e0ef;
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: 0 10px 24px rgba(18, 36, 58, 0.08);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.compactSection {
+  display: grid;
+  gap: var(--space-1);
+  padding: 0;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.interactiveArea {
+  display: grid;
+  gap: var(--space-2);
+  padding: 0;
+  min-height: 0;
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: 100%;
+  align-content: start;
+}
+
+.collectionDisclosureRow {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.collectionToggleButton {
+  border: 0;
+  background: transparent;
+  color: #6f87a0;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.collectionToggleButtonOpen {
+  color: #2f699e;
+}
+
+.collectionToggleLabel {
+  font-size: 9px;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-transform: lowercase;
+}
+
+.collectionToggleIcon {
+  display: inline-flex;
+  width: 11px;
+  height: 11px;
+  align-items: center;
+  justify-content: center;
+}
+
+.collectionToggleIcon svg {
+  width: 11px;
+  height: 11px;
+  stroke-width: 2.2;
+}
+
+.collectionRow,
+.categoryRow,
+.dimensionRow {
+  display: flex;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: auto;
+  padding: 0 0 1px 0;
+  box-sizing: border-box;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.collectionRow {
+  gap: 10px;
+}
+
+.categoryRow {
+  gap: 5px;
+}
+
+.dimensionRow {
+  gap: 6px;
+}
+
+.collectionRow::-webkit-scrollbar,
+.categoryRow::-webkit-scrollbar,
+.dimensionRow::-webkit-scrollbar,
+.tagGrid::-webkit-scrollbar,
+.resultList::-webkit-scrollbar {
+  display: none;
+}
+
+.collectionButton,
+.categoryButton {
+  border: 1px solid #c8d9ea;
+  background: transparent;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.collectionButton {
+  border-radius: var(--radius-level-1);
+  color: #244b73;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.25;
+  height: 38px;
+  padding: 0 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.categoryButton {
+  border-radius: var(--radius-level-2);
+  color: #2b547d;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 1.2;
+  height: 30px;
+  width: var(--category-expanded-width, 72px);
+  padding: 0 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition:
+    width 180ms ease,
+    border-radius 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease;
+}
+
+.categoryIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  flex: 0 0 14px;
+}
+
+.categoryIcon svg {
+  width: 14px;
+  height: 14px;
+  stroke-width: 2.1;
+}
+
+.categoryLabel {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 6px;
+  line-height: 1;
+}
+
+.categoryButtonCollapsed {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border-radius: calc(var(--radius-level-2) - 2px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.categoryButtonCollapsed .categoryIcon {
+  width: 13px;
+  height: 13px;
+  flex-basis: 13px;
+}
+
+.categoryButtonCollapsed .categoryIcon svg {
+  width: 13px;
+  height: 13px;
+  stroke-width: 2.1;
+}
+
+.categoryButtonActive .categoryIcon {
+  color: inherit;
+}
+
+.collectionButtonActive,
+.categoryButtonActive {
+  border-color: #2f699e;
+  background: #2f699e;
+  color: #ffffff;
+}
+
+.dimensionButton {
+  flex: 0 0 auto;
+  width: var(--filter-chip-height);
+  height: var(--filter-chip-height);
+  padding: 0;
+  border-radius: var(--radius-level-3);
+  border: 1px solid #b7ccd0;
+  background: transparent;
+  color: #2c5b49;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease;
+}
+
+.dimensionGlyph {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 13px;
+  height: 13px;
+}
+
+.panelStack {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.panelCard {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.panelCloseButton {
+  color: #2c5b49;
+  border-color: #b7ccd0;
+  background: transparent;
+  animation: moveFromToolbar 220ms ease;
+}
+
+.panelCloseButton:hover {
+  border-color: #1f6c54;
+  color: #1f6c54;
+}
+
+.closeGlyphFrom,
+.closeGlyphTo {
+  position: absolute;
+  inset: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.dimensionGlyph svg,
+.closeGlyphFrom svg,
+.closeGlyphTo svg {
+  width: 13px;
+  height: 13px;
+  stroke-width: 2.2;
+}
+
+.closeGlyphFrom {
+  animation: glyphOut 220ms ease forwards;
+}
+
+.closeGlyphTo {
+  animation: glyphIn 220ms ease forwards;
+}
+
+.tagGrid {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 6px;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-right: 2px;
+  box-sizing: border-box;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  align-items: center;
+}
+
+.tagButton {
+  flex: 0 0 auto;
+  height: var(--filter-chip-height);
+  border: 1px solid #cadff1;
+  border-radius: var(--radius-level-3);
+  background: #ffffff;
+  color: #2f557b;
+  padding: 0 8px;
+  font-size: 10px;
+  line-height: 1.2;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.tagButtonActive {
+  border-color: #2d6ca2;
+  background: #2d6ca2;
+  color: #ffffff;
+}
+
+.resultList {
+  display: grid;
+  gap: 6px;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  overflow-y: auto;
+  min-height: 132px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: min-content;
+  align-content: start;
+  align-items: start;
+  box-sizing: border-box;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.itemCard {
+  display: grid;
+  gap: 2px;
+  padding: 6px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid #d3e3f3;
+  background: transparent;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  align-self: start;
+}
+
+.itemTitle {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.25;
+  color: #12273d;
+}
+
+.itemMeta,
+.itemCollections {
+  margin: 0;
+  font-size: 11px;
+  color: #4f6782;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emptyState {
+  border: 1px dashed #bfd1e2;
+  border-radius: var(--radius-sm);
+  padding: 8px;
+  grid-column: 1 / -1;
+}
+
+.emptyState p {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.35;
+  color: #4f6782;
+}
+
+@keyframes moveFromToolbar {
+  0% {
+    transform: translateY(-34px) scale(0.92);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes glyphOut {
+  0% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.86) rotate(-12deg);
+  }
+}
+
+@keyframes glyphIn {
+  0% {
+    opacity: 0;
+    transform: scale(1.1) rotate(12deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
