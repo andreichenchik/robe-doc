@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
-import { X } from "lucide-react";
+import { ChevronDown, X } from "lucide-react";
 import {
   categoryDefinitions,
   collectionDefinitions,
@@ -9,6 +9,7 @@ import {
   type CategoryDefinition,
   type CategoryId,
   type CollectionId,
+  type CollectionSelection,
   type FilterDimension,
   type ItemCategoryId,
   type WardrobeItem,
@@ -34,24 +35,20 @@ function createEmptyTabState(): TabFilterState {
 }
 
 function createEmptyTabStateByCategory(): TabStateByCategory {
-  return {
-    all: createEmptyTabState(),
-    top: createEmptyTabState(),
-    bottom: createEmptyTabState(),
-    footwear: createEmptyTabState(),
-    accessory: createEmptyTabState(),
-    outwear: createEmptyTabState(),
-  };
+  return categoryDefinitions.reduce((state, category) => {
+    state[category.id] = createEmptyTabState();
+    return state;
+  }, {} as TabStateByCategory);
 }
 
-function belongsToCollection(item: WardrobeItem, collectionId: CollectionId): boolean {
-  if (collectionId === "all") {
+function belongsToCollection(item: WardrobeItem, collectionId: CollectionSelection): boolean {
+  if (!collectionId) {
     return true;
   }
   return item.collectionIds.includes(collectionId);
 }
 
-function getAvailableCategories(collectionId: CollectionId): CategoryDefinition[] {
+function getAvailableCategories(collectionId: CollectionSelection): CategoryDefinition[] {
   const nonEmptyCategorySet = new Set<ItemCategoryId>();
   for (const item of wardrobeItems) {
     if (belongsToCollection(item, collectionId)) {
@@ -122,7 +119,8 @@ function toggleDimensionValue(
 }
 
 export function WardrobeFilteringPrototype() {
-  const [selectedCollection, setSelectedCollection] = useState<CollectionId>("all");
+  const [isCollectionPanelOpen, setCollectionPanelOpen] = useState(false);
+  const [selectedCollection, setSelectedCollection] = useState<CollectionSelection>(null);
   const [activeCategory, setActiveCategory] = useState<CategoryId>("all");
   const [tabStateByCategory, setTabStateByCategory] = useState<TabStateByCategory>(() => {
     return createEmptyTabStateByCategory();
@@ -140,7 +138,7 @@ export function WardrobeFilteringPrototype() {
     setActiveCategory(availableCategories[0].id);
   }, [availableCategories, activeCategory]);
 
-  const activeTabState = tabStateByCategory[activeCategory];
+  const activeTabState = tabStateByCategory[activeCategory] ?? createEmptyTabState();
 
   const contextItems = useMemo(() => {
     return wardrobeItems.filter((item) => {
@@ -198,7 +196,7 @@ export function WardrobeFilteringPrototype() {
     },
   ];
   const activePanelSet = new Set(activeTabState.activePanels);
-  const visiblePanelItems = panelItems.filter((panel) => panel.options.length > 0);
+  const visiblePanelItems = panelItems.filter((panel) => panel.options.length > 1);
   const activePanels = visiblePanelItems.filter((panel) => activePanelSet.has(panel.definition.id));
   const inactivePanels = visiblePanelItems.filter((panel) => !activePanelSet.has(panel.definition.id));
 
@@ -206,18 +204,30 @@ export function WardrobeFilteringPrototype() {
     setTabStateByCategory((current) => {
       return {
         ...current,
-        [activeCategory]: updater(current[activeCategory]),
+        [activeCategory]: updater(current[activeCategory] ?? createEmptyTabState()),
       };
     });
   };
 
-  const handleCollectionSelect = (collectionId: CollectionId): void => {
-    if (collectionId === selectedCollection) {
-      return;
-    }
+  const applyCollectionContext = (collectionId: CollectionSelection): void => {
     setSelectedCollection(collectionId);
     setActiveCategory("all");
     setTabStateByCategory(createEmptyTabStateByCategory());
+  };
+
+  const handleCollectionPanelToggle = (): void => {
+    setCollectionPanelOpen((current) => {
+      const next = !current;
+      if (!next) {
+        applyCollectionContext(null);
+      }
+      return next;
+    });
+  };
+
+  const handleCollectionSelect = (collectionId: CollectionId): void => {
+    const nextCollection = selectedCollection === collectionId ? null : collectionId;
+    applyCollectionContext(nextCollection);
   };
 
   const moveToAdjacentCategory = (direction: "previous" | "next"): void => {
@@ -285,21 +295,38 @@ export function WardrobeFilteringPrototype() {
     <div className={styles.root}>
       <div className={styles.phoneFrame}>
         <section className={styles.compactSection}>
-          <div className={styles.collectionRow}>
-            {collectionDefinitions.map((collection) => {
-              const isActive = collection.id === selectedCollection;
-              return (
-                <button
-                  className={`${styles.collectionButton} ${isActive ? styles.collectionButtonActive : ""}`}
-                  key={collection.id}
-                  type="button"
-                  onClick={() => handleCollectionSelect(collection.id)}
-                >
-                  {collection.title}
-                </button>
-              );
-            })}
+          <div className={styles.collectionDisclosureRow}>
+            <button
+              aria-expanded={isCollectionPanelOpen}
+              aria-label={isCollectionPanelOpen ? "Close collections" : "Open collections"}
+              className={`${styles.collectionToggleButton} ${isCollectionPanelOpen ? styles.collectionToggleButtonOpen : ""}`}
+              type="button"
+              onClick={handleCollectionPanelToggle}
+            >
+              <span className={styles.collectionToggleLabel}>collections</span>
+              <span className={styles.collectionToggleIcon} aria-hidden="true">
+                {isCollectionPanelOpen ? <X /> : <ChevronDown />}
+              </span>
+            </button>
           </div>
+
+          {isCollectionPanelOpen ? (
+            <div className={styles.collectionRow}>
+              {collectionDefinitions.map((collection) => {
+                const isActive = collection.id === selectedCollection;
+                return (
+                  <button
+                    className={`${styles.collectionButton} ${isActive ? styles.collectionButtonActive : ""}`}
+                    key={collection.id}
+                    type="button"
+                    onClick={() => handleCollectionSelect(collection.id)}
+                  >
+                    {collection.title}
+                  </button>
+                );
+              })}
+            </div>
+          ) : null}
         </section>
 
         <section className={styles.compactSection}>

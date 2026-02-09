@@ -4,8 +4,8 @@ import { BadgeCheck, Footprints, Gem, Layers, LayoutGrid, Palette, Shirt, Tags }
 export type FilterDimension = "type" | "color" | "brand";
 export type ItemCategoryId = "top" | "bottom" | "footwear" | "accessory" | "outwear";
 export type CategoryId = "all" | ItemCategoryId;
-export type CollectionId = "all" | "summer" | "sport" | "winter";
-export type ItemCollectionId = Exclude<CollectionId, "all">;
+export type CollectionId = "summer" | "sport" | "winter";
+export type CollectionSelection = CollectionId | null;
 
 export type WardrobeItem = {
   id: string;
@@ -14,7 +14,7 @@ export type WardrobeItem = {
   type: string;
   color: string;
   brand: string;
-  collectionIds: ItemCollectionId[];
+  collectionIds: CollectionId[];
   dateAdded: string;
 };
 
@@ -36,7 +36,6 @@ export type DimensionDefinition = {
 };
 
 export const collectionDefinitions: CollectionDefinition[] = [
-  { id: "all", title: "All" },
   { id: "summer", title: "Summer" },
   { id: "sport", title: "Sport" },
   { id: "winter", title: "Winter" },
@@ -57,7 +56,7 @@ export const dimensionDefinitions: DimensionDefinition[] = [
   { id: "brand", title: "Brand", Icon: BadgeCheck },
 ];
 
-export const collectionTitleById: Record<ItemCollectionId, string> = {
+export const collectionTitleById: Record<CollectionId, string> = {
   summer: "Summer",
   sport: "Sport",
   winter: "Winter",

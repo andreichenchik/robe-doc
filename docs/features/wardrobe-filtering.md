@@ -11,23 +11,29 @@ The wardrobe serves as a visual browser of everything the user owns. Its primary
 Wardrobe filtering is a three-level interaction model:
 
 1. **Level 1 — Collection context**
-   - User selects one [Collection](../domain/collection.md) or `All`.
-   - `All` means "show items from every collection context".
-   - Switching collection resets lower levels to their default state.
+   - The collection control is collapsible and is shown as a compact `collections` trigger in the top-right area.
+   - By default, this control is collapsed.
+   - When collapsed, collection selection is cleared.
+   - User can open the control and select one [Collection](../domain/collection.md), or keep collection selection empty.
+   - Empty selection means "show items from every collection context".
+   - Tapping an already selected collection clears the selection.
+   - The trigger shows a chevron-down when collapsed and a close action (`x`) when expanded.
+   - Changing or clearing collection selection resets lower levels to their default state.
 
 2. **Level 2 — Category tabs**
    - Category tabs are swipeable.
    - The first tab is `All`, followed by system categories.
    - The tab row shows only categories that currently have at least one item in the selected collection context.
-   - Changing collection resets the active category tab to `All`.
+   - Changing or clearing collection selection resets the active category tab to `All`.
 
 3. **Level 3 — Detail filters**
    - Detail filters are shown as circular icon buttons: [Type](../domain/type.md), [Color](../domain/color.md), and [Brand](../domain/brand.md).
+   - A detail filter dimension is shown only if the current upper context has at least two available tag values for that dimension.
    - Multiple detail filters can be active at the same time.
    - Activating a detail filter expands its tag panel.
    - While active, the icon changes to a close action (`x`).
    - Tapping the close action clears that filter and collapses its panel.
-   - Available tags are limited to values present in the current upper context (selected collection + selected category tab).
+   - Available tags are limited to values present in the current upper context (selected collection, if any, + selected category tab).
    - Long tag lists are scrollable inside the expanded filter panel.
 
 ## Filter Logic
@@ -47,7 +53,7 @@ Users select filter values and the wardrobe view updates to show only matching i
 - The same filter logic and empty-state text are used when filtering items within [Collections](../domain/collection.md).
 - Filter state is stored per category tab during the current collection session.
 - Switching category tabs in the same collection restores each tab's own filter state.
-- Switching collection fully resets category-tab and detail-filter state.
+- Changing or clearing collection selection fully resets category-tab and detail-filter state.
 - Filter state is not persisted across app restarts.
 
 ## Prototype
