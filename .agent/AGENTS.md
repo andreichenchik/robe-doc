@@ -55,7 +55,7 @@ Describes what the product can do. Each feature is a distinct capability that de
 
 Examples: AI classification, wardrobe filtering, outfit collage.
 
-Focus on: purpose, behavior, UI elements, error handling.
+Focus on: purpose, behavior rules, decision points, and error handling. Avoid UI implementation details unless they are behavior-critical.
 
 ### flows/
 
@@ -68,6 +68,7 @@ Focus on: trigger, steps, decision points, success/failure outcomes.
 ## Writing Guidelines
 
 - **Abstract from tech stack.** Documentation describes *what* the product does, not *how* it is implemented. Do not mention specific technologies, frameworks, databases, or APIs. Write so that the documentation remains valid regardless of the underlying implementation.
+- **Describe product behavior, not UI implementation.** In `docs/features/**`, document user intent, behavior, and rules. Avoid prescribing exact control layout, iconography, or gestures unless required to define behavior. Keep concrete visual realization in prototypes.
 
 - **Single source of truth.** Define each concept in exactly one place. Other files that mention it should link to the source rather than repeat the description. For example, a flow step should say `[Collections](../domain/collection.md)` instead of re-explaining what a collection is. This keeps updates localized to one file.
 - One file = one concept. Split when a file grows beyond its scope.
