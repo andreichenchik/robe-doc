@@ -1,6 +1,6 @@
 # AI Classification
 
-Automatically detects clothing attributes from a photo. Requires a background-removed image as input (see [Background Removal](./background-removal.md)).
+Automatically detects clothing attributes from an item photo.
 
 ## Purpose
 
@@ -26,18 +26,29 @@ Reduce manual effort when adding items. Instead of filling in every field by han
 - Suggests existing user [Collections](../domain/collection.md) that the item may belong to. This is target behavior and is not yet implemented. See [Current Limitations](../constraints/current-limitations.md#ai-collection-suggestion-not-yet-implemented).
 - AI does not detect additional style attributes such as material, pattern, season, or style tags.
 
+## Input Selection
+
+- Classification uses the cutout photo when it is available.
+- If cutout generation has failed, classification can run on the original photo.
+- After a successful cutout retry, classification can be rerun to refresh detected attributes.
+
 ## User Override
 
 All AI-detected attributes ([Type](../domain/type.md), [Color](../domain/color.md), [Brand](../domain/brand.md), [Collections](../domain/collection.md)) can be reviewed and corrected by the user after classification completes.
 
-> [!NOTE]
-> **Undefined — requires clarification:**
-> - What happens when AI classification fails or returns low confidence?
+## Confidence Policy
+
+- Classification uses an all-or-nothing confidence decision.
+- If confidence is low, no attributes are auto-filled.
+- Low-confidence runs move the item to **Classification Failed**.
 
 ## Error Handling
 
-> [!NOTE]
-> **Undefined — requires clarification:**
-> - Behavior when the photo doesn't contain recognizable clothing.
-> - Behavior when the network is unavailable.
-> - Retry/fallback strategy.
+| Scenario | Expected Behavior |
+|----------|------------------|
+| Network unavailable | Item moves to **Classification Deferred** and classification resumes when network is available. User can also retry manually. |
+| Classification returns low confidence | Item moves to **Classification Failed** and no attributes are auto-filled. |
+| Classification returns no reliable result | Item moves to **Classification Failed** and no attributes are auto-filled. |
+| User retries classification | Classification reruns against the best available item image (cutout first, otherwise original). |
+
+Current implementation gap for deferred/failed lifecycle and retry behavior: [Current Limitations](../constraints/current-limitations.md#classification-recovery-flow-is-incomplete).

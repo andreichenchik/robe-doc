@@ -19,9 +19,11 @@ Photo selection is the only decision point in the flow. Once the user confirms, 
 
 After confirmation, each item appears in the wardrobe right away with a visible [processing status](../domain/item.md#processing-status). The pipeline runs automatically without user intervention:
 
-1. **Background removal** — [Background Removal](../features/background-removal.md) processes the photo.
-2. **Upload** — the processed image is uploaded.
-3. **Classification** — [AI Classification](../features/ai-classification.md) runs and fills recognized attributes.
+1. **Item creation** — item is created immediately with the original photo.
+2. **Background removal** — [Background Removal](../features/background-removal.md) attempts cutout generation.
+3. **Upload/Sync** — the active photo variant is uploaded/synced.
+4. **Classification** — [AI Classification](../features/ai-classification.md) runs (cutout preferred, original fallback).
+5. **Recovery actions** — user can retry background removal and classification independently.
 
 When multiple photos are selected from the gallery, all items are processed in parallel.
 
@@ -29,13 +31,14 @@ There is no confirmation screen for recognition results. Attributes are applied 
 
 ## Result
 
-New items appear in the wardrobe with clean cutout photos and populated attributes.
+New items appear in the wardrobe immediately. Depending on processing outcome, an item may finish with a cutout and recognized attributes, or remain with failure/deferred statuses until retried.
 
 ## Error Scenarios
 
 | Scenario | Expected Behavior |
 |----------|------------------|
-| AI classification fails | *Undefined* |
-| Background removal fails | *Undefined* |
-| Network unavailable | *Undefined* |
-| Photo is not a clothing item | *Undefined* |
+| AI classification fails | Item moves to **Classification Failed**. No low-confidence attributes are auto-applied. User can retry classification. |
+| Background removal fails | Item keeps original photo and moves to **Processing Failed**. User can retry background removal. |
+| Network unavailable | Background removal still runs. Classification moves to **Classification Deferred** and resumes when network is available. |
+| Photo is not a clothing item | Background removal typically fails or returns unusable output; item remains with original photo and requires retry/replacement by user. |
+| Photo contains multiple clothing items | Output may be a merged cutout treated as one item. Current implementation gap: [Current Limitations](../constraints/current-limitations.md#multi-item-photo-segmentation-is-unreliable). |

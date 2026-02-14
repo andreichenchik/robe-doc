@@ -36,7 +36,6 @@ Current limitation: subscription gating and item limits are not yet implemented.
 
 How user data — especially photos — is handled. Affects trust, compliance, and feature design.
 
-- Where photos are stored (device only, cloud, or both).
 - What data is sent to external services (e.g. images sent for AI classification).
 - Whether any data is shared with third parties.
 

@@ -30,6 +30,30 @@ As limitations are resolved, remove them from this list.
 
 ---
 
+## Original Photo Preservation Is Incomplete
+
+[Item](../domain/item.md) defines two photo variants per item: original photo and cutout photo. Currently, successful processing can leave only the cutout variant, so full reprocessing from the original image is not always possible.
+
+---
+
+## Background Removal Failure UX Is Incomplete
+
+[Background Removal](../features/background-removal.md) and [Add Item](../flows/add-item.md) define an explicit failed state with retry. Currently, failed cutout cases may fall back to original photo without a clear failure lifecycle and guided retry flow.
+
+---
+
+## Classification Recovery Flow Is Incomplete
+
+[AI Classification](../features/ai-classification.md) defines deferred classification for offline mode, failed state for no reliable result, and repeatable retries. Currently, offline/deferred and failed states are handled inconsistently.
+
+---
+
+## Multi-Item Photo Segmentation Is Unreliable
+
+[Background Removal](../features/background-removal.md) defines one-item-per-photo behavior. Currently, photos with multiple clothing pieces can produce unpredictable merged cutouts.
+
+---
+
 ## Subscription Not Yet Implemented
 
 [User](../domain/user.md) describes a subscription model that gates certain features and limits the number of items for free users. Currently, all features are available to all users with no paywall or item limits.
