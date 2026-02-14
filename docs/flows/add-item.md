@@ -23,11 +23,17 @@ After confirmation, each item appears in the wardrobe right away with a visible 
 2. **Background removal** — [Background Removal](../features/background-removal.md) attempts cutout generation.
 3. **Upload/Sync** — the active photo variant is uploaded/synced.
 4. **Classification** — [AI Classification](../features/ai-classification.md) runs (cutout preferred, original fallback).
-5. **Recovery actions** — user can retry background removal and classification independently.
 
 When multiple photos are selected from the gallery, all items are processed in parallel.
 
 There is no confirmation screen for recognition results. Attributes are applied automatically as they become available. The user can edit them later from the item screen.
+
+## Recovery Actions
+
+Recovery is user-initiated and is not part of the automatic processing pipeline.
+
+- User can retry [Background Removal](../features/background-removal.md) after **Processing Failed**.
+- User can retry [AI Classification](../features/ai-classification.md) after **Classification Failed** or **Classification Deferred**.
 
 ## Result
 
