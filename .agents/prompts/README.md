@@ -14,7 +14,7 @@ Prompt files used by GitHub Actions workflows and available for manual use via C
 ### Prioritize a single issue
 
 ```bash
-claude -p "Read .agent/prompts/prioritize-issue.md for instructions.
+claude -p "Read .agents/prompts/prioritize-issue.md for instructions.
 
 Apply those instructions to issue #<NUMBER>.
 
@@ -35,7 +35,7 @@ gh project item-list 7 --owner andreichenchik --format json \
   | jq -r '.items[] | select(.priority == null or .priority == "") | .content.number' \
   | while read -r num; do
       echo "=== Processing issue #$num ==="
-      claude -p "Read .agent/prompts/prioritize-issue.md for instructions.
+      claude -p "Read .agents/prompts/prioritize-issue.md for instructions.
 
 Apply those instructions to issue #$num.
 
@@ -50,7 +50,7 @@ Use these values for placeholders:
 ### Refine a single issue
 
 ```bash
-claude -p "Read .agent/prompts/refine-issue.md for instructions.
+claude -p "Read .agents/prompts/refine-issue.md for instructions.
 
 Apply those instructions to issue #<NUMBER>.
 
