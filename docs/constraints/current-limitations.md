@@ -18,15 +18,15 @@ As limitations are resolved, remove them from this list.
 
 ---
 
-## Default Starter Collections Not Yet Implemented
-
-[Collection](../domain/collection.md) mentions predefined starter collections for new users. Currently, no collections exist by default — users must create all collections manually.
-
----
-
 ## AI Collection Suggestion Not Yet Implemented
 
 [AI Classification](../features/ai-classification.md) lists collection suggestion as a capability, and [Collection](../domain/collection.md) describes AI suggesting existing collections during item classification. This feature is not yet implemented — collections are currently assigned manually by the user only.
+
+---
+
+## Collections Model and Filtering Are Partial
+
+[Collection](../domain/collection.md) defines starter collections for new users, multi-assignment across items and outfits, and strict collection lifecycle rules, while [Wardrobe Filtering](../features/wardrobe-filtering.md) depends on a consistent collection-level interaction model. Currently, no starter collections are created by default, behavior is closer to a single-selection tag model, rule enforcement is partial, and collection-level filtering does not fully match documented show/hide persistence behavior.
 
 ---
 
@@ -62,28 +62,28 @@ As limitations are resolved, remove them from this list.
 
 ## Account Deletion Does Not Clean Up Cloud Data
 
-[User](../domain/user.md) states that all associated data is removed when an account is deleted. Currently, cloud-stored files (item images and other uploads) are not cleaned up during deletion and remain as orphans.
-
----
-
-## Outfit Photo Gallery Not Yet Implemented
-
-[Outfit](../domain/outfit.md) supports multiple photos per outfit. Currently, only a single photo can be attached to an outfit.
-
----
-
-## Create Outfit Entry Point Is Incomplete
-
-[Create Outfit](../flows/create-outfit.md) defines two entry points: the outfits tab and the wardrobe screen. Currently, create outfit is available only from the outfits tab.
-
----
-
-## Collage Undo/Redo Not Yet Implemented
-
-[Outfit Collage](../features/outfit-collage.md) defines undo and redo actions in the collage editor. Currently, undo and redo are not available.
+[User](../domain/user.md) states that all associated data is removed when an account is deleted. Currently, cloud-stored files (item images and other uploads) are not cleaned up during deletion and remain as orphans. This also diverges from [Profile](../features/profile.md), which requires explicit confirmation before account deletion, while current behavior may execute deletion without that safety step.
 
 ---
 
 ## Type ID Typo in Backend Catalog
 
 [Type](../domain/type.md) documentation defines the canonical bottom type as `leggings`. Currently, backend catalog still returns legacy key `leggins` for this type.
+
+---
+
+## Portrait-Only Constraint Is Not Fully Enforced
+
+[Platform](./platform.md) defines portrait-only support as the product contract. Currently, app behavior can still allow landscape in some contexts, which makes the platform constraint inconsistent and reduces predictability for orientation-dependent flows.
+
+---
+
+## Outfit Creation and Presentation Are Partial
+
+[Outfit](../domain/outfit.md), [Outfit Collage](../features/outfit-collage.md), [Create Outfit](../flows/create-outfit.md), and [Edit Outfit](../flows/edit-outfit.md) describe multi-photo support, two create entry points, undo/redo in collage editing, draft visibility in the main list by default, non-empty outfit/collage requirements, collage-first list previews, and explicit `updated at` semantics. Currently, these behaviors are only partially aligned: only one outfit photo is supported, create outfit is not available from all documented entry points, undo/redo is unavailable, drafts may be hidden by default, empty outfit states can appear through some create/edit paths, list preview source is not consistently collage-first, and `updated at` is not consistently represented as a first-class product attribute.
+
+---
+
+## Item Naming and Processing Terms Differ
+
+[Item](../domain/item.md) specifies a deterministic auto-name pattern and a defined processing status vocabulary for newly added items. Currently, the generated name field order and visible status terminology can differ from documented definitions, which causes mismatch between expected and observed product language.
