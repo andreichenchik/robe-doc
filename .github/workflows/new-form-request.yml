@@ -31,7 +31,7 @@ jobs:
           claude_args: |
             --allowedTools "Bash(gh issue view:*),Bash(gh issue edit:*),Bash(gh issue list:*),Read"
           prompt: |
-            Read the file `.agent/prompts/refine-issue.md` for instructions.
+            Read the file `.agents/prompts/refine-issue.md` for instructions.
 
             Apply those instructions to issue #${{ github.event.issue.number }}.
 
@@ -50,7 +50,7 @@ jobs:
           claude_args: |
             --allowedTools "Bash(gh issue view:*),Bash(gh issue edit:*),Bash(gh issue comment:*),Bash(gh project item-list:*),Bash(gh project item-edit:*),Bash(gh project field-list:*),Bash(gh project view:*),Bash(gh api:*),Read"
           prompt: |
-            Read the file `.agent/prompts/prioritize-issue.md` for instructions.
+            Read the file `.agents/prompts/prioritize-issue.md` for instructions.
 
             Apply those instructions to issue #${{ github.event.issue.number }}.
 
